@@ -9,8 +9,8 @@ defined('ACCESS') || header("location:../");
      define('dbNAME', 'u492773924_paul');
 
 	 /// login with google api 
-	 define('clientID', '669317464723-1n3cppjelaujm69ep0fe7buqtg37klpu.apps.googleusercontent.com');
-	 define('clientSecret','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');
+	 define('clientID', '669317464723-920o9uvg4pm19fh7dqg648b4cf7ja3ib.apps.googleusercontent.com');
+	 define('clientSecret','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');
      define('redirectUri','https://paul.formalmonkey.com/google/auth');
 
 	// Email Credentials
