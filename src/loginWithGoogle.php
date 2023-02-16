@@ -48,8 +48,8 @@ class loginWithGoogle extends Google_Client
         }
 
 
-        function button($buttonTest){
-          return "<a class='btn button-background mt-6 align-items-center d-block mx-auto w-100 round-button' href='" . $this->createAuthUrl() . "'>{$buttonTest}</a>";
+        function button($buttonTest=null){
+          return "<a class='btn button-background mt-6 align-items-center d-block mx-auto w-100 round-button' href='" . $this->createAuthUrl() . "'>{$buttonTest??'Login with Google'}</a>";
     }
 }
 
