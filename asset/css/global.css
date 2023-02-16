@@ -1,0 +1,93 @@
+.pagination-recent-post.pagination {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 18px;
+}
+
+.pagination-recent-post.pagination .jp-previous {
+    display: inline-block;
+    cursor: pointer;
+}
+
+a.deactArrow {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.pagination-recent-post.pagination a#jp-previous:before {
+    font-family: "FontAwesome";
+    display: inline-block;
+    font-size: 30px;
+    content: "\f104";
+    margin-right: 5px;
+    color: #0091ae;
+    vertical-align: middle;
+    position: relative;
+   
+}
+
+.pagination-recent-post.pagination a#jp-previous:after {
+    content: "Prev";
+}
+
+.pagination-recent-post.pagination a#jp-previous:after {
+    display: inline-block;
+    font-size: 14px;
+    content: "Prev";
+    vertical-align: middle;
+    color: #0091ae;
+    margin-right: 10px;
+}
+
+.deactArrow {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.pagination-recent-post.pagination .jp-next {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.pagination-recent-post.pagination a#jp-next:before {
+    content: "Next";
+}
+
+.pagination-recent-post.pagination a#jp-next:before {
+    display: inline-block;
+    font-size: 14px;
+    content: "Next";
+    vertical-align: middle;
+    color: #0091ae;
+    margin-left: 5px;
+}
+
+.pagination-recent-post.pagination a#jp-next:after {
+    font-family: "FontAwesome";
+    display: inline-block;
+    font-size: 30px;
+    content: "\f105";
+    margin-left: 5px;
+    color: #0091ae;
+    vertical-align: middle;
+    position: relative;
+   
+}
+
+.pagination-recent-post.pagination a.page_link.pagination-posts.active {
+    background: #e5f5f8 0% 0% no-repeat padding-box;
+    border: 1px solid #7fd1de;
+    border-radius: 3px;
+    padding: 0px 8px;
+    pointer-events: none;
+}
+
+.pagination-recent-post.pagination a.page_link.pagination-posts {
+    color: #0091ae;
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+}

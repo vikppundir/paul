@@ -1,99 +1,254 @@
 <?php
 defined('ACCESS') || header("location:../");
- /**
-  *  its is spl_autoload_register function which inclue all file.
-  */
+/**
+ * user : WMI
+ * date : 20/08/2022
+ * Root Class is handling URl Path
+ * require class are called here and magic function include the file by class name
+ * the router file have the router
+ */
 
-    spl_autoload_register(function ($class_name) {
-       
-      if (file_exists(getcwd() . '/validation/' . $class_name . '.php')) 
-         include_once getcwd() . '/validation/' . $class_name . '.php';
-      
-      if (file_exists(getcwd() . '/server/' . $class_name . '.php')) 
-         include_once getcwd() . '/server/' . $class_name . '.php';
+/// load a defind value
+require_once getcwd() . '/connection/connect.php';
 
-      if (file_exists(getcwd() . '/connection/' . $class_name . '.php')) 
-         include_once getcwd() . '/connection/' . $class_name . '.php';
-       
-      if (file_exists(getcwd() . '/model/' . $class_name . '.php')) 
-         include_once getcwd() . '/model/' . $class_name . '.php';  
+//Load Composer's autoloader
+require_once 'vendor/autoload.php';
 
-      if (file_exists(getcwd() . '/app/controller/' . $class_name . '.php')) 
-         include_once getcwd() . '/app/controller/' . $class_name . '.php';
+//router load
+require_once getcwd() . '/router/spl_autoload_register.php';
 
-      if (file_exists(getcwd() . '/auth/' . $class_name . '.php')) 
-         include_once getcwd() . '/auth/' . $class_name . '.php';  
+$router = new \Bramus\Router\Router();
+//echo $_SESSION['roll'];
+define('ABSPATH', $router->getBasePath());
+$router->before('GET|POST', '/dashboad/.*', function() {
+        if(!is_supper_admin()): header("Location:".ABSPATH); endif;
+});
 
-      if (file_exists(getcwd() . '/app/' . $class_name . '.php')) 
-         include_once getcwd() . '/app/' . $class_name . '.php'; 
+$router->before('GET|POST', '/session/admin/.*', function() {
+    
+        if(!is_supper_admin()):
+        if(!is_admin()): header("Location:".ABSPATH); endif;
+        endif;
+        
 
-      if (file_exists(getcwd() . '/src/' . $class_name . '.php')) 
-         include_once getcwd() . '/src/' . $class_name . '.php'; 
 
+});
+
+
+
+$router->before('GET|POST', '/admin/.*', function() {
+    
+        if(!is_supper_admin()):
+        if(!is_admin()): header("Location:".ABSPATH); endif;
+        endif;
+});
+
+
+
+/// all api envarment here
+$router->mount('/api/app', function () use ($router)
+{
+
+    $router->post("/login", function ()
+    {
+        $login = new Authorization();
+        $login->login();
 
     });
 
-    /**
-     * Holds the registered routes
-     *
-     * @var array $routes
-     */
-    $routes = [];
-    
-    /**
-     * Register a new route
-     *
-     * @param $action string
-     * @param \Closure $callback Called when current URL matches provided action
-     */
-    function route($action, Closure $callback)
+    $router->post("/register", function ()
     {
-        global $routes;
-        $action = trim($action, '/');
-        $action = preg_replace('/{[^}]+}/','(.*)',$action);
+        $login = new Authorization();
+        $login->registeration();
+    });
 
-        $routes[$action] = $callback;
-    }
-    
-    /**
-     * Dispatch the router
-     *
-     * @param $action string
-     */
-    function dispatch($action)
+    $router->post("/verifyotp", function ()
     {
-        global $routes;
+        $login = new Authorization();
+        $login->verifyOTP();
+    });
+
+});
+
+
+
+$router->mount('/dashboad/api/app', function () use ($router)
+{
+ 
+    
+    $router->post("/component", function ()
+    {
+        $login = new components();
+        $login->create();
+    });
+    
+    $router->post("/endpoint", function ()
+    {
+        $login = new endpoint();
+        $login->create();
+    });
+    
+    $router->post("/page", function ()
+    {
+        $post = new templates();
+        $post->create();
+    });
+    
+    $router->post("/skin", function ()
+    {
+        $post = new skin();
+        $post->create();
+    });
+
+});
+
+$router->mount('/session/admin/v2/api/app', function () use ($router)
+{
+    
+    $router->match("GET|POST","/category", function ()
+    {
+        $category = new category();
+        $category->init();
        
-        $action = trim($action, '/');
+    });
+    
 
-        $callback = null;
+});
 
-        $params =[];
 
-        foreach($routes as $route => $handler):
+$router->mount('/session/v2/api/app', function () use ($router)
+{
+    
+    $router->post("/category", function ()
+    {
+        $category = new category();
+        $category->init();
+       
+    });
 
-          if(preg_match("%^{$route}$%",$action, $matches) === 1):
-
-             $callback = $handler;
-
-             $params = $matches;
-
-             unset($matches[0]);
-
-             break;
-
-          endif;
-
-        endforeach; 
+    $router->match("GET|POST","/business", function ()
+    {
         
-        if(!$callback || !is_callable($callback)):
-          
-         http_response_code(404);
-         header("HTTP/1.0 404 Not Found");
-          require_once 'view/template/header.php';
-         require_once 'view/page/404-page.html';
-         exit;
-        endif;
-        
-        echo call_user_func($callback, ...$params);
-    }
+        $business = new business();
+        $business->init();
+       
+    });
+    
+
+});
+
+// dashoad menus envarment
+$router->mount('/dashboad', function () use ($router)
+{
+    
+    
+    
+    $router->get('/', function ()
+    {
+        if(!is_supper_admin()): header("Location:".ABSPATH); endif;
+        viewD('header');
+        viewD('dashboad');
+        viewD('footer');
+
+    });
+
+    $router->get('/(\d+)', function ($id)
+    {
+        echo ' id ' . htmlentities($id);
+    });
+
+    $router->match('GET|POST','/component', function ()
+    {
+         viewD('header');
+         viewD('components');
+         viewD('footer');
+  
+
+    });
+
+    $router->match('GET|POST','/endpoint', function ()
+    {
+        viewD('header');
+        viewD('endpoint');
+        viewD('footer');
+    });
+    
+    $router->match('GET|POST','/page', function ()
+    {
+         viewD('header');
+         viewD('page');
+         viewD('footer');
+  
+
+    });
+    
+    $router->match('GET|POST','/skin', function ()
+    {
+         viewD('header');
+         viewD('skin');
+         viewD('footer');
+  
+
+    });
+    
+   $router->match('GET|POST','/media', function ()
+    {
+         viewD('header');
+         viewD('media');
+         viewD('footer');
+  
+
+    });
+    
+  
+});
+
+$router->get('/v2/{id}/plugin/endpoint/{name}',function($id, $name){
+    $dir = 'app/api/endpoint';
+   $count = sql("select * from endpoint where endpoint_id=:id and name=:name",array(':id'=>$id,':name'=>$name))->count;
+   $fileName = "{$dir}/{$name}.php";
+   if($count === 1):if(file_exists($fileName)) echo'<pre>'; include $fileName; echo'</pre>';else:
+   endif;
+});
+
+// for google login call back functiion this class define in src folder
+$router->get('google/auth/', 'loginWithGoogle@login');
+
+// this is logout method call define in controller
+$router->get('/logout', 'Authorization@logout');
+
+//login function
+$router->get("/login", function ()
+{
+    $google = new loginWithGoogle();
+    !isset($_SESSION['IntrbologinEmail']) || header("Location:" . ABSPATH . "dashboad");
+    require_once 'view/dashboad/login.php';
+    require_once 'view/dashboad/footer.php';
+});
+
+// signUp function
+$router->get("/signup", function ()
+{
+    $google = new loginWithGoogle();
+    require_once 'view/dashboad/registration.php';
+    require_once 'view/dashboad/footer.php';
+
+});
+
+require_once 'adminRouter.php';
+require_once 'frentRouter.php';
+
+
+$router->set404(function ()
+{
+
+    header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
+    header('HTTP/1.1 404 Not Found');
+    
+    view('page404');
+});
+
+$router->run();
+
+//session_destroy();
+

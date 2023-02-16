@@ -1,0 +1,49 @@
+/* mentor banner */
+#mentors-banner{
+    background-image: url('https://images.pexels.com/photos/9064792/pexels-photo-9064792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-size: cover;
+}
+#mentors-banner::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000000a1;
+}
+.mentors-button{
+    margin-top: 25px;
+}
+.mentors-banner-content{
+    padding: 140px 0;
+}
+.mentors-content-heading h2{
+    font-size: 70px;
+    font-weight: 600;
+}
+.mentors-banner-content p{
+    font-size: 16px;
+line-height:20px;
+    margin-top: 8px;
+}
+.mentors-banner-content h2,.mentors-banner-content p,.mentors-btn a{
+    color: var(--white);
+}
+.mentors-btn{
+    scale: 1;
+    transition: scale 0.3s ease-in-out;
+    -webkit-transition: scale 0.3s ease-in-out;
+    -moz-transition: scale 0.3s ease-in-out;
+    -ms-transition: scale 0.3s ease-in-out;
+    -o-transition: scale 0.3s ease-in-out;
+}
+.mentors-btn a{
+    border: 1px solid var(--white);
+    padding: 10px 30px;
+    font-size: 17px;
+}
+.mentors-btn:hover{
+    scale: 1.05;
+}

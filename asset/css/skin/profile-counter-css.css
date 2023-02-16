@@ -1,0 +1,40 @@
+section.counters-section{
+    padding: 100px 0;
+}
+.mentor-counter-heading{
+    margin-top: 15px    ;
+}
+.counters-section h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+.box .item h1{
+    font-size:75px;
+    font-weight:400;
+}
+.box .item h2{
+    font-size:25px;
+    font-weight: 400;
+}
+.mentor-counter-section .box:last-child{
+    margin: 50px 0;
+}
+@media only screen and (max-width: 767px){
+    .counters-section h4{
+        text-align: center;
+        font-size: 45px;
+        font-weight: 600;
+    }
+    .box .item h1{
+        font-size: 50px;
+    }
+    .box .item h2{
+        font-size: 20px;
+    }
+    .mentor-counter-section .box:last-child{
+        margin: 15px 0;
+    }
+    .counters-section .box{
+        justify-content: unset !important;
+    }
+}

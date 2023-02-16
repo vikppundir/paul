@@ -1,0 +1,12 @@
+.abouttrademan-left-side {
+    margin-top: 50px;
+}
+@media(max-width:767px){
+    /* about */
+    .aboutimgsec {
+        padding-top: 22px;
+    }
+    .abouttrademan-right-side {
+        margin-top: 36px;
+    }
+}

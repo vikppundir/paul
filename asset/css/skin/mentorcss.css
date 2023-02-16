@@ -1,0 +1,17 @@
+#mentor {
+    padding: 50px 0;
+    background-color: var(--bluebg);
+}
+
+.get-started-description p {
+    font-size: 18px;
+}
+
+.mentor-started-text>div,
+.review-left-descriptionn>div {
+    margin-top: 20px;
+}
+
+.mentor-icon {
+    height: 200px;
+}

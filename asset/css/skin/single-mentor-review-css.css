@@ -1,0 +1,21 @@
+.mentor-review-heading h3{
+    font-size: 50px;
+    font-weight: 400;
+}
+.mentor-single-review-testimonial .owl-nav{
+    display: none;
+}
+.review-mentor-name{
+    margin-top: 5px;
+    font-size: 25px;
+    color: var(--textclr);
+}
+.mentor-single-review-testimonial{
+    padding: 100px 0;
+    background: var(--bluebg);
+}
+@media only screen and (max-width: 767px){
+.mentor-review-heading h3{
+    margin-bottom: 25px;
+}
+}

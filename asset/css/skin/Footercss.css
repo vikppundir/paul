@@ -1,0 +1,40 @@
+/* Footer design */
+.footerlogo {
+    height: auto;
+}
+.main-footer {
+    background-color: #212b36;
+    padding: 70px 0 60px;
+}
+.footerlogo h2 {
+    font-size: 30px;
+    color: #fff;
+}
+.footerbox h3 {
+    color: var(--white);
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+.foot-list {
+    list-style: none;
+    padding: 6px 0px;
+}
+.foot-list a, .footer-description p{
+    color: var(--white);
+    font-size: 15px;
+}
+footer a{
+ color: var(--white);
+
+}
+.footer-description p{
+font-size:16px;
+padding-top:10px;
+font-weight:400;
+}
+@media(max-width:992px){
+    /* Footer */
+    .footerbox {
+        margin: 12px 0;
+    }
+}

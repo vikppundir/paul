@@ -1,7 +1,7 @@
 
-
+let projectName = '/'
 // global functions
-function request(url, data, callback) {
+function request(url, data, callback,action = null) {
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', url, true);
 	var loader = document.createElement('div');
@@ -22,6 +22,11 @@ function request(url, data, callback) {
 	if(csrfMetaTag) {
 		formdata.append('csrf_token', csrfMetaTag.getAttribute('content'));
 	}
+	if(action != null){
+	   
+	   formdata.append('action',action);
+ 
+	}
 
 	xhr.send(formdata);
 }
@@ -35,6 +40,248 @@ function logout() {
 		}
 	});
 }
+
+
+
+function businessRegistration(e){
+    
+	request(projectName+'session/v2/api/app/business', '#businessRegistration', function(data) {
+	   
+		document.getElementById('errs').innerHTML = "";
+		var transition = document.getElementById('errs').style.transition;
+		document.getElementById('errs').style.transition = "none";
+		document.getElementById('errs').style.opacity = 0;
+		
+		data = JSON.parse(data);
+	//	if(!(data instanceof Array)) {throw Exception('bad data');}
+		//Show errors to user
+	//	for(var i = 0;i < data.length;++i) {
+			switch(data.code) {
+			case 0:
+				window.location = projectName+'admin/category/?name='+data.name;
+				break;
+			case 1:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces,number, and hyphens)</div>';
+				break;
+			case 2:
+				document.getElementById('errs').innerHTML += '<div class="err">This category already exists </div>';
+				break;
+			case 3:
+				document.getElementById('errs').innerHTML += '<div class="err">Please try Agin some think wrong please and reload this page</div>';
+				break;
+			case 4:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid CSRF Token... Nice try</div>';
+				break;
+			default:
+				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+		   }
+	   // }
+		setTimeout(function() {
+			document.getElementById('errs').style.transition = transition;
+			document.getElementById('errs').style.opacity = 1;
+		}, 10);
+	},'create');
+}
+
+
+
+function createCategory(e){
+    
+	request(projectName+'session/v2/api/app/category', '#categoryCreate', function(data) {
+	   
+		document.getElementById('errs').innerHTML = "";
+		var transition = document.getElementById('errs').style.transition;
+		document.getElementById('errs').style.transition = "none";
+		document.getElementById('errs').style.opacity = 0;
+		
+		data = JSON.parse(data);
+	//	if(!(data instanceof Array)) {throw Exception('bad data');}
+		//Show errors to user
+	//	for(var i = 0;i < data.length;++i) {
+			switch(data.code) {
+			case 0:
+				window.location = projectName+'admin/category/?name='+data.name;
+				break;
+			case 1:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces,number, and hyphens)</div>';
+				break;
+			case 2:
+				document.getElementById('errs').innerHTML += '<div class="err">This category already exists </div>';
+				break;
+			case 3:
+				document.getElementById('errs').innerHTML += '<div class="err">Please try Agin some think wrong please and reload this page</div>';
+				break;
+			case 4:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid CSRF Token... Nice try</div>';
+				break;
+			default:
+				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+		   }
+	   // }
+		setTimeout(function() {
+			document.getElementById('errs').style.transition = transition;
+			document.getElementById('errs').style.opacity = 1;
+		}, 10);
+	},'create');
+}
+
+
+function createSkin() {
+     debugger;
+	request(projectName+'dashboad/api/app/skin', '#skin', function(data) {
+	   
+		document.getElementById('errs').innerHTML = "";
+		var transition = document.getElementById('errs').style.transition;
+		document.getElementById('errs').style.transition = "none";
+		document.getElementById('errs').style.opacity = 0;
+		
+		data = JSON.parse(data);
+	//	if(!(data instanceof Array)) {throw Exception('bad data');}
+		//Show errors to user
+	//	for(var i = 0;i < data.length;++i) {
+			switch(data.code) {
+			case 0:
+				window.location = projectName+'dashboad/skin/?skin='+data.name;
+				break;
+			case 1:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces,number, and hyphens)</div>';
+				break;
+			case 2:
+				document.getElementById('errs').innerHTML += '<div class="err">This skin already exists </div>';
+				break;
+			case 3:
+				document.getElementById('errs').innerHTML += '<div class="err">Please try Agin some think wrong please and reload this page</div>';
+				break;
+			case 4:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid CSRF Token... Nice try</div>';
+				break;
+			default:
+				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+		   }
+	   // }
+		setTimeout(function() {
+			document.getElementById('errs').style.transition = transition;
+			document.getElementById('errs').style.opacity = 1;
+		}, 10);
+	});
+}
+
+function createPage() {
+	request(projectName+'dashboad/api/app/page', '#createComponent', function(data) {
+		document.getElementById('errs').innerHTML = "";
+		var transition = document.getElementById('errs').style.transition;
+		document.getElementById('errs').style.transition = "none";
+		document.getElementById('errs').style.opacity = 0;
+		
+		data = JSON.parse(data);
+	//	if(!(data instanceof Array)) {throw Exception('bad data');}
+		//Show errors to user
+	//	for(var i = 0;i < data.length;++i) {
+			switch(data.code) {
+			case 0:
+				window.location = projectName+'dashboad/page/?page='+data.name;
+				break;
+			case 1:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces, and hyphens)</div>';
+				break;
+			case 2:
+				document.getElementById('errs').innerHTML += '<div class="err">This templete already exists </div>';
+				break;
+			case 3:
+				document.getElementById('errs').innerHTML += '<div class="err">Please try Agin some think wrong please and reload this page</div>';
+				break;
+			case 4:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid CSRF Token... Nice try</div>';
+				break;
+			default:
+				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+		   }
+	   // }
+		setTimeout(function() {
+			document.getElementById('errs').style.transition = transition;
+			document.getElementById('errs').style.opacity = 1;
+		}, 10);
+	});
+}
+
+function createComponent() {
+	request(projectName+'dashboad/api/app/component', '#createComponent', function(data) {
+		document.getElementById('errs').innerHTML = "";
+		var transition = document.getElementById('errs').style.transition;
+		document.getElementById('errs').style.transition = "none";
+		document.getElementById('errs').style.opacity = 0;
+		
+		data = JSON.parse(data);
+	//	if(!(data instanceof Array)) {throw Exception('bad data');}
+
+		//Show errors to user
+	//	for(var i = 0;i < data.length;++i) {
+			switch(data.code) {
+			case 0:
+				window.location = projectName+'dashboad/component/?component='+data.name;
+				break;
+			case 1:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces, and hyphens)</div>';
+				break;
+			case 2:
+				document.getElementById('errs').innerHTML += '<div class="err">This component already exists </div>';
+				break;
+			case 3:
+				document.getElementById('errs').innerHTML += '<div class="err">Please try Agin some think wrong please and reload this page</div>';
+				break;
+			case 4:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid CSRF Token... Nice try</div>';
+				break;
+			default:
+				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+		   }
+	   // }
+		setTimeout(function() {
+			document.getElementById('errs').style.transition = transition;
+			document.getElementById('errs').style.opacity = 1;
+		}, 10);
+	});
+}
+
+
+function createEndpoint() {
+	request(projectName+'dashboad/api/app/endpoint', '#createEndpoint', function(data) {
+		document.getElementById('errs').innerHTML = "";
+		var transition = document.getElementById('errs').style.transition;
+		document.getElementById('errs').style.transition = "none";
+		document.getElementById('errs').style.opacity = 0;
+		data = JSON.parse(data);
+	//	if(!(data instanceof Array)) {throw Exception('bad data');}
+    // debugger;
+		//Show errors to user
+	//	for(var i = 0;i < data.length;++i) {
+			switch(data.code) {
+			case 0:
+				window.location = projectName+'dashboad/endpoint/?endpoint='+data.name;
+				break;
+			case 1:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces, and hyphens)</div>';
+				break;
+			case 2:
+				document.getElementById('errs').innerHTML += '<div class="err">This endpoint already exists </div>';
+				break;
+			case 3:
+				document.getElementById('errs').innerHTML += '<div class="err">Please try Agin some think wrong please and reload this page</div>';
+				break;
+			case 4:
+				document.getElementById('errs').innerHTML += '<div class="err">Invalid CSRF Token... Nice try</div>';
+				break;
+			default:
+				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+		   }
+	   // }
+		setTimeout(function() {
+			document.getElementById('errs').style.transition = transition;
+			document.getElementById('errs').style.opacity = 1;
+		}, 10);
+	});
+}
+
 function deleteAccount() {
 	request('api/app/deleteAccount', false, function(data) {
 		document.getElementById('errs').innerHTML = "";
@@ -76,10 +323,9 @@ function login() {
 		document.getElementById('errs').style.transition = "none";
 		document.getElementById('errs').style.opacity = 0;
 		var data = JSON.parse(data);
-		console.log(data.data.code);
 		switch(data.data.code) {
 			case 0:
-				window.location = './dashboad';
+				window.location = './';
 				break;
 			case 1:
 				document.getElementById('errs').innerHTML += '<div class="err">Incorrect username or password</div>';
@@ -112,7 +358,7 @@ function login() {
 
 // register.php
 function register() {
-	request('api/app/register', '#registerForm', function(data) {
+	request(projectName+'api/app/register', '#registerForm', function(data) {
 		document.getElementById('errs').innerHTML = "";
 		var transition = document.getElementById('errs').style.transition;
 		document.getElementById('errs').style.transition = "none";
@@ -126,8 +372,8 @@ function register() {
 				switch(data[i]) {
 					case 0:
 						document.getElementById('sucessMsg').innerHTML += '<div>Your account has been created!</div><div>Please validate your email by checking your inbox for a validation OTP before logging in.</div>';
-						document.getElementById('register_from').style.display = "none";
-						document.getElementById('verify-otp').style.display = "block";
+						document.getElementById('registerForm').style.display = "none";
+						document.getElementById('verifyOtpForm').style.display = "block";
 						break;
 					case 1:
 						document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces, and hyphens)</div>';
@@ -192,26 +438,29 @@ function register() {
 // validate OTP
 function verifyOtp() {
 	request('api/app/verifyotp', '#verifyOtpForm', function(data) {
-		document.getElementById('errsotp').innerHTML = "";
-		var transition = document.getElementById('errsotp').style.transition;
-		document.getElementById('errsotp').style.transition = "none";
-
-		switch(data) {
+		document.getElementById('errs').innerHTML = "";
+		var transition = document.getElementById('errs').style.transition;
+		document.getElementById('errs').style.transition = "none";
+console.log(data.replace(/\s/g,''));
+		switch(data.replace(/\s/g,'')) {
 			case '0':
-				window.location = './dashboad';
+				window.location.reload();
 				document.getElementById('verifyOtpForm').reset();
 				break;
 			case '1':
-				document.getElementById('errsotp').innerHTML += '<div class="err">Wrong OTP</div>';
+				document.getElementById('errs').innerHTML += '<div class="err">Wrong OTP</div>';
 				break;
 			case '2':
-					document.getElementById('errsotp').innerHTML += '<div class="err">Somthing wrong with update your status Please reset and try again</div>';
+					document.getElementById('errs').innerHTML += '<div class="err">Somthing wrong with update your status Please reset and try again</div>';
 					break;
 			case '3':
-					document.getElementById('errsotp').innerHTML += '<div class="err">Please resend OTP to verify</div>';
+					document.getElementById('errs').innerHTML += '<div class="err">Please resend OTP to verify</div>';
+					break;
+			case '4':
+					document.getElementById('errs').innerHTML += '<div class="err">Please resend opt Your session destory or token not validate</div>';
 					break;
 			default:
-				document.getElementById('errsotp').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
 		}
 		setTimeout(function() {
 			document.getElementById('errs').style.transition = transition;
@@ -354,3 +603,4 @@ function changePassword() {
 		}, 10);
 	});
 }
+

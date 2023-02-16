@@ -1,0 +1,27 @@
+.about-mentor{
+    padding: 50px 0;
+}
+.about-mentor-heading h4{
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--textclr);
+}
+.about-mentor-description{
+    width: 85%;
+}
+.about-mentor-description p{
+    margin-top: 46px;
+    font-size: 50px;
+    line-height: 60px;
+}
+@media only screen and (max-width: 1012px){
+    .about-mentor-description{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .about-mentor-description p{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

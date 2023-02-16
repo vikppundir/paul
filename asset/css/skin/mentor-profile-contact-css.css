@@ -1,0 +1,78 @@
+.mentor-experience-info{
+    padding: 50px 0 100px 0;
+    background: var(--bluebg);
+}
+.mentor-experience-info a{
+color:var(--text);
+}
+.mentor-experience-info .experience-box{
+    padding: 15px 75px 0 75px;
+}
+.mentor-experience-info .experience-box:first-child{
+    padding-top: 0px;
+}
+.mentor-experience-info .about-mentor-experience{
+    margin-top: 10px;
+}
+.mentor-experience-info .mentor-experience-info a{
+    color: var(--text);
+}
+.mentor-experience-info i{
+    font-size: 14px;
+    margin-right: 12px;
+}
+.mentor-experience-info h4{
+    font-weight: 400;
+    font-size: 20px;
+}
+.mentor-experience-info .experience-box-heading h3{
+    font-size: 28px;
+    font-weight: 400;
+}
+.mentor-experience-info .experience-box-heading h3 span{
+    font-size: 25px;
+    margin-right: 15px;
+}
+.mentor-experience-info .mentor-time-table-info td{
+    padding: 2px 50px 2px 0;
+    font-size: 17px;
+}
+.experience-description:last-child{
+    border-bottom: 1px solid var(--dark);
+}
+.mentor-experience-info .experience-description-info{
+    border-bottom: 1px solid var(--dark);
+}
+.experience-equal-height{
+    min-height: 120px;
+}
+table.mentor-time-table-info{
+padding-bottom:25px;
+}
+.mentor-experience-info .experience-description-info p{
+    margin-top: 5px;
+    font-size: 18px;
+    color: var(--textclr);
+    padding-bottom: 50px;
+}
+@media only screen and (max-width: 1012px){
+    .mentor-experience-info .experience-box{
+        padding: 15px 15px 0 15px;
+    }
+    .mentor-experience-info .experience-description p{
+        min-height: 155px;
+    }
+
+}
+@media only screen and (max-width: 767px){
+    .mentor-experience-info .mentor-experience{
+        padding-top: 0;
+    }
+    .mentor-experience-info .experience-description p{
+        min-height: unset;
+        padding-bottom: 20px;
+    }
+    .mentor-experience-info .experience-box-heading{
+        padding-top: 25px;
+    }
+}

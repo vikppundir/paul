@@ -1,0 +1,51 @@
+#mentorees-banner{
+    background-image: url('https://images.pexels.com/photos/9064305/pexels-photo-9064305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-size: cover;
+}
+#mentorees-banner::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000000a1;
+}
+.mentorees-content-description p{
+line-height:21px;
+}
+.mentorees-button{
+    margin-top: 25px;
+}
+.mentorees-banner-content{
+    padding: 140px 0;
+}
+.mentorees-content-heading h2{
+    font-size: 70px;
+    font-weight: 600;
+}
+.mentorees-banner-content p{
+ font-size: 16px;
+margin-top:8px;
+line-height:20px;
+}
+.mentorees-banner-content h2,.mentorees-banner-content p,.mentorees-btn a{
+    color: var(--white);
+}
+.mentorees-btn{
+    scale: 1;
+    transition: scale 0.3s ease-in-out;
+    -webkit-transition: scale 0.3s ease-in-out;
+    -moz-transition: scale 0.3s ease-in-out;
+    -ms-transition: scale 0.3s ease-in-out;
+    -o-transition: scale 0.3s ease-in-out;
+}
+.mentorees-btn a{
+    border: 1px solid var(--white);
+    padding: 10px 30px;
+font-size:17px;
+}
+.mentorees-btn:hover{
+    scale: 1.05;
+}

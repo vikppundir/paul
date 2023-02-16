@@ -1,0 +1,4 @@
+[30-Dec-2022 14:45:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function component() in /home/tz39s0p4a422/public_html/intrbo/view/template/homePage.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrbo/view/template/homePage.php on line 1

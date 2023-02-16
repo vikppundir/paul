@@ -5,6 +5,6 @@
  */
     
     
-    define('ACCESS', true); define('ABSPATH', "/".basename(__DIR__)."/");
+    define('ACCESS', true); 
      // this is a root file handling all inputs and class to server gives rensponse 
-    require_once getcwd() . '/router/root.php';
+    require_once getcwd() . '/router/router.php';

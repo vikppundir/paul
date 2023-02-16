@@ -1,0 +1,86 @@
+/* Testimonial slider */
+.testimonial {
+    background: #f4fafb;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 140px;
+}
+.abouttrademan-head h2{
+font-size: 35px !important;
+}
+section.testimonial .owl-nav.disabled {
+    display: none !important;
+}
+.testimonial-textbox-inner>div{
+margin-bottom:15px;
+}
+.testimonial-textbox-inner{
+    padding: 57px 57px 57px 0;
+}
+.testimonial-textbox-inner>div{
+margin-bottom:15px;
+}
+.sliderleftsec {
+    position: absolute;
+    pointer-events: none;
+}
+.sliderleftsec div#owl-carousels {
+    margin-left: 27vw;
+    pointer-events: all;
+}
+.sliderleftsec .owl-nav.disabled {
+    display: block !important;
+    position: absolute;
+    top: -30px;
+    left: -27vw;
+    pointer-events: all;
+}
+
+.testimonial-slider-box {
+    background-color: var(--white);
+    padding: 20px 20px 60px;
+}
+.testimonial-rating-box {
+    padding: 17px 16px 12px;
+    background: aliceblue;
+}
+.testimonial-slider-footer{
+    padding-top: 30px;
+}
+.testimonial-slider-footer a {
+    font-size: 15px;
+    color: var(--purple);
+    font-weight: 600;
+    border-bottom: 1px solid var(--green);
+}
+.testimonial-textbox-inner h2{
+ font-size:25px;
+}
+.testimonial-slider-box i.fa-solid.fa-quote-left {
+        font-size: 40px;
+    color: #00c08b;
+}
+.owl-nav{
+font-size:50px !important;
+}
+.testimonial-rating-box h2 {
+    font-size: 30px;
+    text-align: center;
+}
+/* Testimonial slider end */
+@media(max-width:992px){
+    /* Testimonial */
+    .testimonial{
+        padding: 50px 0;
+    }
+    .testimonial-textbox-inner {
+        padding: 0px 57px 57px 0;
+    }
+    .sliderleftsec {
+        position: relative;
+    }
+    .sliderleftsec div#owl-carousels{
+        margin-left: 0;
+    }
+    /* Testimonial End */
+}

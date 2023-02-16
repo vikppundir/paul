@@ -1,0 +1,65 @@
+.mentor-skills-section{
+    padding: 100px 0 0 0;
+}
+.mentor-skills-section .row{
+padding-bottom:100px;
+border-bottom:1px solid var(--dark);
+}
+.mentor-skills-heading h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+.skill-box{
+    margin-bottom: 25px;
+}
+.skill-heading h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.skill-description p{
+    width: 80%;
+    padding-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid var(--dark);
+}
+.right-mentor-image{
+    width: 80%;
+    height: 320px;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+.right-mentor-image-cover{
+    z-index: -1;
+    width: 60%;
+    height: 250px;
+    align-self: baseline;
+    margin-top: -75px;
+    margin-left: 5px;
+}
+.skill-list-box{
+    width: 80%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--dark);
+}
+.skill-list h5{
+    font-weight: 400;
+    font-size: 19px;
+}
+.skill-list h5>span{
+    font-size: 15px;
+    margin-right: 5px;
+    color: var(--textclr);
+}
+.skill-list-box{
+    flex-wrap: wrap;
+}
+.skill-list-box>div{
+    flex:0 50%;
+    margin: 5px 0;
+}
+@media only screen and (max-width: 767px){
+.mentor-skills-heading h4{
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+}

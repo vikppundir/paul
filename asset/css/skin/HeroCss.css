@@ -1,0 +1,88 @@
+/* banner */
+#home-banner {
+    padding: 0px 0 100px 0;
+}
+
+.left-banner {
+    max-width: 350px;
+    margin-left: 100px;
+    margin-right: -100px;
+}
+
+.banner-description p {
+    font-weight: 500;
+}
+
+.side-bar {
+    top: 20%;
+    left: 0;
+    height: 300px;
+    width: 15px;
+    background-color: var(--primary);
+}
+
+.banner-text {
+    z-index: 10;
+}
+
+.owl-nav,
+.owl-dots {
+    display: none;
+}
+
+.right-banner .item {
+    height: 500px;
+}
+
+.right-banner .item img,
+.right-banner .item {
+    border-radius: 100px 0 100px 0;
+    -webkit-border-radius: 100px 0 100px 0;
+    -moz-border-radius: 100px 0 100px 0;
+    -ms-border-radius: 100px 0 100px 0;
+    -o-border-radius: 100px 0 100px 0;
+}
+
+.right-banner .item::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.85), transparent, transparent);
+    z-index: 2;
+    border-radius: 99px 0 0 0;
+    -webkit-border-radius: 99px 0 0 0;
+    -moz-border-radius: 99px 0 0 0;
+    -ms-border-radius: 99px 0 0 0;
+    -o-border-radius: 99px 0 0 0;
+}
+@media only screen and (max-width: 986px){
+#home-banner{
+        padding-top: 60px;
+    }
+    .banner-text {
+        padding-left: 16px;
+    }
+    .right-banner,
+    .review-right-testimonial {
+        margin-top: 30px;
+    }
+
+    .right-banner .item::before,
+    .right-banner .item img,
+    .right-banner .item {
+        border-radius: 40px 0 40px 0;
+        -webkit-border-radius: 40px 0 40px 0;
+        -moz-border-radius: 40px 0 40px 0;
+        -ms-border-radius: 40px 0 40px 0;
+        -o-border-radius: 40px 0 40px 0;
+    }
+}
+@media only screen and (max-width:578px){
+.left-banner {
+    max-width: 100%;
+    margin-left: 15px;
+    margin-right: 0;
+    float: unset;
+}
+}

@@ -1,0 +1,315 @@
+  body,
+  button {
+    font-family: 'Montserrat';
+  }
+
+  .headbtn button {
+    border: 0;
+    background: #f7f7F7;
+    color: grey;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .headbtn {
+    height: 60px;
+    background-color: white;
+    top: 0px;
+    z-index: 90;
+    padding-top: 18px;
+  }
+
+  .teacherinput input {
+    height: 55px;
+    border: 0;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 16px;
+    outline: 0;
+  }
+
+  .teachbuttonred {
+    padding: 17px 45px;
+    background: #63f3ff;
+    color: white;
+    border: 2px solid;
+    font-size: 16px;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .redeffectbtn {
+    padding: 20px 105px;
+    box-shadow:0 10px 25px -5px #63f3ff1c;
+    border: 0;
+  }
+
+  .around>i,
+  .english>i {
+    padding-left: 30px;
+    color: #808080;
+    font-size: 20px;
+  }
+
+  .teacherinput {
+    box-shadow: 0 5px 20px 0 rgb(34 34 32 / 20%);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 60px;
+    transition: .3s all ease-out;
+  }
+
+  .t-dropdown-list img {
+    height: 20px;
+  }
+
+  .text {
+    display: table;
+    margin: 20px auto;
+  }
+
+  .t-dropdown-list {
+    display: none;
+    background-color: #FFF;
+    z-index: 10;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 20%);
+    list-style: none;
+    overflow: auto;
+    position: absolute;
+    width: 35% !important;
+    border-radius: 5px;
+    padding: 15px 0;
+    z-index: 999;
+  }
+
+  .teacherinput input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+    font-family: 'Montserrat';
+  }
+
+  .t-dropdown-item {
+    padding: 15px 5px 15px 12px;
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #808080;
+  }
+
+  .teacher-description p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  li.t-dropdown-item i {
+    margin-right: 10px;
+    color: #808080;
+    font-size: 18px;
+  }
+
+  ul.t-dropdown-list li:hover {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+  }
+
+  ul.t-dropdown-list li:hover.t-dropdown-item i {
+    color: #fa6484;
+  }
+
+  .teacher-review span {
+    color: grey;
+  }
+
+  .teacher-medal-description {
+    color: #444;
+  }
+
+  .teachheading h1 {
+    font-size: 28px;
+  }
+
+  .facetoface {
+    background-color: #157dfe !important;
+    color: white !important;
+  }
+
+  /* shubham */
+
+  .teacher-box.relative img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .teacher-title h2 {
+    font-size: 24px;
+    color: white;
+  }
+
+  .teacher-box {
+    height: 300px;
+
+  }
+
+  .teacher-box::before {
+    border-radius: 15px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9;
+  }
+
+  .teacher-box:hover::before {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .teacher-box-main {
+    flex: 0 32%;
+    box-shadow: 0px 4px 16px rgb(96 97 112 / 8%);
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+cursor:pointer;
+  }
+
+  .teacher-medal-image {
+    height: 15px;
+  }
+
+  .teacher-proper-description {
+    padding: 0px 10px 10px 10px;
+  }
+
+  .teacher-description-box {
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    z-index: 99;
+  }
+
+  .teacherbottomp {
+    color: #525252;
+    font-size: 14px;
+  }
+
+  .teach-hr-box {
+    padding: 10px;
+    border-radius: 27px;
+    background-color: #63f3ff1c;
+    color: #63f3ff;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .teacher-rating-box {
+    font-size: 12px;
+  }
+
+  .teacher-box-main:hover .teacher-box {
+    background-size: 108%;
+    transition: background-size 0.8s ease-in-out;
+  }
+
+  .teacher-box-main:hover .teacher-box::before {
+    transition: background-color 0.8s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .teach-hr-box img {
+    height: 12px;
+  }
+
+  /* hover */
+  .teacher-box-main:hover {
+    background-color: #f7f7f7;
+    transform: translateY(-10px);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .teacherinput:hover {
+    transition: all .3s ease;
+    box-shadow: 0 10px 35px 0 rgb(34 34 32 / 10%);
+  }
+
+  .teacher-box-main:hover .teacher-box.relative img {
+    transform: scale3d(1.055, 1.055, 1.055);
+  }
+
+  /* .teachbuttonred:hover {
+    background-color: #ff9292;
+  }
+
+  .headbtn button:hover {
+    background-color: #dcecff;
+    color: #157dfe;
+  } */
+  @media only screen and (max-width: 1210px) {
+    .teacher-box-main {
+      flex: 0 48%;
+    }
+  }
+  @media only screen and (max-width: 769px) {
+    .teacher-box-main {
+      flex: 0 48%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .teachbuttonred{
+      margin: 0 auto;
+      display: block;
+    }
+    .teacher-box-main {
+      flex: 0 100%;
+    }
+
+    .teacherinput {
+      flex-direction: column;
+    }
+
+    .t-dropdown-list {
+      width: 83% !important;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .redeffectbtn {
+      padding: 20px 55px;
+    }
+  }
+
+  input:focus+i {
+    color: #fa6484 !important;
+  }
+
+
+  /*  */
+  .techer-img {
+    overflow: hidden;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  span.icon-bookmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+  }
+
+  span.icon-bookmark i {
+    font-size: 20px;
+  }
+
+  span.icon-bookmark i:hover {
+    color: #fff;
+  }

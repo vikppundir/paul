@@ -8,9 +8,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
-require_once 'vendor/autoload.php';
-
 //Create an instance; passing `true` enables exceptions
 class Mailer extends PHPMailer
 {

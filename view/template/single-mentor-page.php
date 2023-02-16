@@ -1,0 +1,11 @@
+<?php component('HtmlHead') ?>
+<?php component('Header') ?>
+<?php component('mentor-profile-page-bannner') ?>
+<?php component('about-mentor-profile-description') ?>
+<?php component('mentor-profile-experience') ?>
+<?php component('mentor-profile-contact') ?>
+<?php component('single-mentor-skill') ?>
+<?php component('mentor-profile-counter') ?>
+<?php component('single-mentor-review') ?>
+<?php component('Footer') ?>
+<?php component('HtmlEnd') ?>

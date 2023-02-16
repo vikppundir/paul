@@ -1,0 +1,129 @@
+/* header */
+header {
+    padding: 15px 20px;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--headerbg);
+}
+
+.header-shadow {
+position:fixed;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+
+
+}
+
+.mentor-ham-burger {
+    display: none;
+}
+
+.burger-line {
+    height: 2px;
+    width: 18px;
+    background-color: var(--dark);
+    margin: 2px 0;
+}
+
+.logo-img h2 {
+    font-size: 25px;
+}
+
+nav ul li a {
+    color: var(--dark);
+    font-size: 17px;
+    padding: 2px;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+}
+
+nav ul>li>a:hover {
+    color: var(--primary);
+}
+
+nav ul>li>a::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    width: 0%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: 100;
+    transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+}
+
+nav ul>li>a:hover::before {
+    width: 100%;
+}
+@media only screen and (max-width: 986px) {
+    nav ul{
+        gap: 18px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        align-items: unset !important;
+    }
+
+    .menu {
+       transform: translate(110%, 0);
+    background-color: #eefeff;
+    position: fixed;
+    width: 440px;
+    top: 0px;
+    right: 0;
+    transition: all 0.3s;
+    -webkit-transform: translate(110%, 0);
+    -moz-transform: translate(110%, 0);
+    -ms-transform: translate(110%, 0);
+    -o-transform: translate(110%, 0);
+    height: 100vh;
+    }
+
+    .mentor-ham-burger {
+        display: flex;
+    }
+
+    .tranform30 {
+        transform: translate(40%, 0) !important;
+        -webkit-transform: translate(40%, 0) !important;
+        -moz-transform: translate(40%, 0) !important;
+        -ms-transform: translate(40%, 0) !important;
+        -o-transform: translate(40%, 0) !important;
+    }
+
+    .cross-menu {
+        margin-bottom: 20px;
+    }
+
+    .cross-menu>div {
+        height: 2px;
+        width: 22px;
+        background-color: var(--text);
+    }
+
+    .cross-one {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+
+    .menu {
+        padding: 25px;
+    }
+
+    .cross-two {
+        margin-top: -2px;
+        transform: rotate(-44deg);
+    }
+}

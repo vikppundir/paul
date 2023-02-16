@@ -1,0 +1,79 @@
+.mentor-faq-box{
+    padding:50px;
+}
+.mentor-faq-heading h2{
+    font-size: 29px;
+}
+.mentor-faq{
+    padding:0 0 100px 0;
+    background-image: linear-gradient(180deg,#eefeff,#f8ffff,#fff);
+}
+.mentor-accordian-box {
+    border: 1px solid #3a3a3a94;
+    border-bottom: 0px solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    margin-top: 20px;
+}
+.mentor-verify-box {
+    border-bottom: 1px solid #3a3a3a94;
+}
+.verify-faq-heading{
+    padding-bottom: 35px;
+}
+.mentor-accordion {
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px 0px; 
+    font-weight: 500;
+    margin: 0;
+}
+.mentor-answer p{
+    padding-bottom: 18px;
+    font-size: 16px;
+    color: var(--dark);
+}
+.mentor-accordion::after {
+    position: absolute;
+    content: '\002B';
+    color: var(--dark);
+    font-weight: bold;
+    right: 0;
+    top: 10px;
+    padding-left: 5px;
+}
+
+.active::after {
+    content: "\2212";
+    color: var(--dark);
+}
+.mentor-answer {
+    overflow: hidden;
+    max-height: 0;
+}
+.mentor-img-size{
+    height: 450px;
+}
+.mentor-image{
+    height: 400px;
+    margin-top: -100px;
+    box-shadow: 0 2px 5px 1px #403c437d;
+border-radius:10px;
+}
+.mentoree-image img{
+height:110%;
+}
+@media only screen and (max-width: 769px){
+    .mentor-faq-box{
+        padding:50px 20px;
+    }
+    .mentor-faq-heading h2{
+        font-size: 25px;
+    }
+    .mentor-image{
+        margin-top: 50px;
+    }
+    .mentor-faq .row{
+        flex-direction: column-reverse;
+    }
+}

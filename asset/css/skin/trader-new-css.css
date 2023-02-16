@@ -1,0 +1,18 @@
+.mentor-trade{
+    padding: 100px 0;
+}
+.female-mentor-image{
+    height: 450px;
+}
+.paul-mentor-heading h3{
+font-size:33px;
+}
+.female-mentor-image img{
+    object-position: top;
+}
+.paul-mentor-description-box{
+    margin-top: 20px;
+}
+.paul-mentor-description-box>div{
+    margin-bottom: 20px;
+}

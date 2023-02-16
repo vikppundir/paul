@@ -12,9 +12,11 @@ class query extends db
 
     private $array;
 
-    public function select($query = '', $prameter = array())
+   
+
+    public function select($query, $prameter = array(),$json =false)
     {
-        header("Content-Type: application/json; charset=UTF-8");
+        
         $return = array(
             'rensponse' => 200,
             'message' => 'success',
@@ -30,8 +32,13 @@ class query extends db
 
         $stmt = $this->openConnection()->prepare($query);
         $stmt->execute($prameter);
+        if($stmt->rowCount()):
         $return['count'] = $stmt->rowCount();
         $return['data'] = $stmt->fetchAll();
+        if($json === 'json'):
+        header("Content-Type: application/json; charset=UTF-8");
+        endif;
+        endif;
         return json_encode($return, JSON_PRETTY_PRINT);
 
     }

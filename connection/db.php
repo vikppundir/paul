@@ -4,7 +4,6 @@
  */
 
 defined('ACCESS') || header("location:../");
-require_once getcwd() . '/connection/connect.php';
 
 Class db{
 

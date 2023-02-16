@@ -1,3 +1,3 @@
 <?php
 
-require_once getcwd() . '/router/routerN.php';
+require_once getcwd() . '/router/router.php';

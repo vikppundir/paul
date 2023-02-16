@@ -1,0 +1,1 @@
+<?php print_r(sql("select * from users")); ?>

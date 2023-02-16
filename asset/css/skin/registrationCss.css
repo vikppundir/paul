@@ -1,0 +1,453 @@
+#heading {
+    text-transform: uppercase;
+    color: #002b49;
+    font-size: 40px;
+    font-weight: 700;
+}
+h3.fs-title-h3 {
+    font-size: 18px;
+    color: #8b8f93;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left;
+}
+.form-card hr {
+    margin: 15px 0 20px;
+}
+.msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+.msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-card {
+    text-align: left
+}
+
+.msform fieldset:not(:first-of-type) {
+    display: none
+}
+.business-day {
+    width: 15%;
+}
+.servicetypemain {
+    margin: 18px 0;
+}
+.msform input, .msform textarea, .msform select {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    background-color: #efefef;
+    font-size: 14px;
+}
+.addmoreservicebtn{
+    background: #002b49;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    width: fit-content;
+    padding: 14px 10px;
+    margin-top: 26px;
+}
+.addmoreservicebtn.remove{
+    background: #ff4b25;
+    margin-left: 13px;
+    padding: 14px 35px;
+}
+.msform input:focus,
+.msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #002b49;
+    outline-width: 0
+}
+
+.msform .action-button {
+    width: 100px;
+    background: #002b49;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+.msform .action-button:hover,
+.msform .action-button:focus {
+    background-color: #002b49
+}
+
+.msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+.msform .action-button-previous:hover,
+.msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #002b49;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #002b49;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left;
+margin-bottom:20px;
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #002b49
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f13e"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f085"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #002b49
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #002b49
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+.buscheck {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+.buscheck input,.selectservices input {
+    width: 26px !important;
+}
+.bootstrap-tagsinput {
+    margin: 0;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.25;
+    transition: border-color 0.15s ease-in-out;
+    background: #eceff1;
+}
+.bootstrap-tagsinput.has-focus {
+    background-color: #eceff1;
+    border-color: #5cb3fd;
+}
+.bootstrap-tagsinput .label-info {
+    display: inline-block;
+    background-color: #636c72;
+    padding: 0 0.4em 0.15em;
+    border-radius: 0.25rem;
+    margin-bottom: 0.4em;
+}
+.bootstrap-tagsinput input {
+    margin-bottom: 0.5em;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:after {
+    content: '\00d7';
+}
+.bootstrap-tagsinput input {
+    margin: 0 !important;
+    border: 0 !important;
+}
+.selectservices input{
+    margin: 0 !important;
+}
+.selectservices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.selectservices > div {
+    width: 30%;
+    font-size: 14px;
+}
+.servicetypemain h4 {
+    margin-bottom: 14px;
+}
+.sucessimg {
+    height: 100px;
+    width: 100px;
+}
+.businesshour-inner {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    margin: 10px 0px;
+}
+.businesshour-inner input, .businesshour-inner select {
+    margin: 0 !important;
+}
+.Fromtime p,.too-time p {
+    text-align: center;
+    color: lightgray;
+    margin-bottom: 2px;
+}
+/* upload logo */
+.uploader {
+    margin-bottom: 20px;
+}
+.uploader label {
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    border: 3px solid #eee;
+    transition: all 0.2s ease;
+    user-select: none;
+    margin-bottom: 24px;
+}
+.uploader label:hover {
+    border-color: #454cad;
+}
+.uploader label.hover {
+    border: 3px solid #454cad;
+    box-shadow: inset 0 0 0 6px #eee;
+}
+.uploader label.hover #start i.fa {
+    transform: scale(0.8);
+    opacity: 0.3;
+}
+.uploader #start {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+.uploader #start.hidden {
+    display: none;
+}
+.uploader #start i.fa {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.uploader #response {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+.uploader #response.hidden {
+    display: none;
+}
+.uploader #response #messages {
+    margin-bottom: 0.5rem;
+}
+.uploader #file-image {
+    display: inline;
+    margin: 0 auto 0.5rem auto;
+    width: auto;
+    height: auto;
+    max-width: 180px;
+}
+.uploader #file-image.hidden {
+    display: none;
+}
+.uploader #notimage {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
+}
+.uploader #notimage.hidden {
+    display: none;
+}
+.uploader progress, .uploader .progress {
+    display: inline;
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 180px;
+    height: 8px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #eee;
+    overflow: hidden;
+}
+.uploader .progress[value]::-webkit-progress-bar {
+    border-radius: 4px;
+    background-color: #eee;
+}
+.uploader .progress[value]::-webkit-progress-value {
+    background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+    border-radius: 4px;
+}
+.uploader .progress[value]::-moz-progress-bar {
+    background: linear-gradient(to right, #393f90 0%, #454cad 50%);
+    border-radius: 4px;
+}
+.uploader input[type="file"] {
+    display: none;
+}
+.uploader div {
+    margin: 0 0 0.5rem 0;
+    color: #5f6982;
+}
+.uploader .btn {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    clear: both;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: initial;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0 1rem;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    background: #454cad;
+    border-color: #454cad;
+    cursor: pointer;
+}
+/* Gallery */
+ul#photos_clearing {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    gap: 11px;
+    flex-wrap: wrap;
+}
+ul#photos_clearing li {
+    width: 12%;
+    height: 66px;
+}
+ul#photos_clearing li img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.bootstrap-tagsinput {
+    padding: 0 10px;
+}
+.bootstrap-tagsinput .label-info:first-child {
+    margin-left: 7px;
+}
+.bootstrap-tagsinput .label-info{
+ color: #fff;
+}
