@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+:root{
+    --theme-element: #015EC2;
+    --theme-section: #e6ebf6;
+}
+::placeholder{
+    color: #939aa0;
+}
+.nav-link i,.search i {
+    color: var(--theme-element);
+}
+
+.bg-gradient-theme-light {
+    background-color: rgb(116, 235, 213);
+    background-image: linear-gradient(90deg, rgb(116, 235, 213) 0%, rgb(159, 172, 230) 100%);    
+
+}
+.bg-gradient-theme--main-light {
+    /*background: linear-gradient(170deg, rgb(255, 255, 255) 0%, #d8e2fc 100%);*/
+    background: #f6f9fd;
+}
+.button-background{
+    background-color: #ffffff;
+    color: #000000;
+    border-color:rgb(159, 172, 230);
+    transition: all 0.5s;
+}
+.button-background:hover{
+    background-color: rgb(116, 235, 213);
+    background-image: linear-gradient(90deg, rgb(116, 235, 213) 0%, rgb(159, 172, 230) 100%);  
+    color:#ffffff;
+    transition: all 0.5s;
+}
+.height{
+    height: 500px;
+}
+.icon{
+    color: rgb(201, 201, 201);
+}
+
+/*Dashboard css*/
+
+/*Header css*/
+header {
+    padding: 13px 18px;
+    display: flex;
+    background: var(--theme-section);
+    position: relative;
+    z-index: 1;
+}
+/* Logo css */
+.logo{
+    width: 15%;
+}
+span.opensidebtn {
+    margin-right: 11px;
+}
+/*Search buttom css*/
+.search {
+    width: 20%;
+}
+.search .input-group {
+    height: 50px;
+}
+/*Left menu css*/
+.left-menu .nav-link{
+    color: #666;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.profileimg {
+    height: 45px;
+    width: 45px;
+}
+.profileimg img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.priledata {
+    margin-left: 12px;
+}
+.priledata h3.name {
+    font-size: 18px;
+    font-weight: 400;
+}
+.priledata p.country {
+    font-size: 16px;
+    font-weight: 300;
+}
+.right-menu ul li:last-child {
+    margin-left: 22px;
+}
+.right-menu ul li i{
+    color: #666;
+}
+/*Left menu css end*/
+/*header css end*/
+
+/*Sidebar css*/
+aside {
+    margin-top: 14px;
+}
+.sidebar{
+    width: 15%;
+    position: fixed !important;
+    height: 100%;
+    top: 0;
+    padding-top: 78px;
+    left: 0;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--theme-section);
+}
+.side-menubox + .side-menubox {
+    margin-top: 24px;
+}
+.side-titlebox{
+    padding: 0 12px;
+}
+.side-titlebox h4,.side-titlebox i{
+    font-size: 16px;
+    font-weight: 500;
+}
+.side-titlebox i{
+    color: var(--theme-element);
+}
+ul.nav.nav-pills li{
+    width: 96%;
+    margin-bottom: 5px;
+    border-radius: 0.25rem;
+}
+ul.nav.nav-pills a.nav-link {
+    display: flex;
+    line-height: 40px;
+    padding: 5px;
+    position: relative;
+    border-radius: 0.25rem;
+}
+.avtaricon {
+    margin-right: 5px !important;
+}
+.avatar {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+.avatar.avatar-40 {
+     line-height: 40px; 
+     height: 40px; 
+     color: #666;
+}
+.avatar.avatar-40 i{
+    color: #666;
+}
+ul.nav.nav-pills {
+    margin-top: 20px;
+}
+a.nav-link .arrow{
+    opacity: 0.3;
+    margin-right: 15px;
+}
+a.nav-link .col {
+    color: #666;
+}
+ul.nav.nav-pills a.nav-link {
+     text-decoration: none; 
+}
+section.sidebar ul.nav.nav-pills li.nav-item a.nav-link.active, section.sidebar ul.nav.nav-pills li.nav-item a.nav-link:hover {
+    color: var(--theme-element);
+    background-color: #fff;
+}
+section.sidebar ul.nav.nav-pills li.nav-item a.nav-link:hover .avatar.avatar-40 i,section.sidebar ul.nav.nav-pills li.nav-item a.nav-link:hover .col{
+    color: var(--theme-element);
+}
+ul.nav.nav-pills a.nav-link:before{
+    content: "";
+    height: 80%;
+    width: 4px;
+    position: absolute;
+    top: 10%;
+    left: -4px;
+    background-color: var(--theme-element);
+    border-radius: 2px;
+    opacity: 0;
+}
+section.sidebar ul.nav.nav-pills li.nav-item a.nav-link.active:before,section.sidebar ul.nav.nav-pills li.nav-item a.nav-link:hover:before{
+    opacity: 1;
+    left: 0;
+}
+div.login,div.register{
+    cursor: pointer;
+}
+/*Sidebar css end*/
+
+/* forgot password css */
+.hover-effect:hover{
+    background-image: linear-gradient(90deg, rgb(116, 235, 213) 0%, rgb(159, 172, 230) 100%);  
+    -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* forgot password css end */
+
+/* mail conformation css */
+.grey-color{
+color: rgb(83,83,83);
+}
+/* mail conformation css end */
+/* password conformation css */
+
+.verify-otp {
+    display: none;
+}
+
+/* password conformation css end */
+/* feature image css */
+.feature-image{
+    font-size: 11px;
+}
+.full-height{
+    height: 91.5vh;
+}
+/* feature image css end */
+
+  
+/*start loader css  */
+.loader{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    background: transparent;
+    z-index: 99;
+  }
+  .loader:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border-top: 2px solid rgb(116, 235, 213);
+    animation: animate 2s linear infinite;
+  }
+  .loader:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -3px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border-bottom: 2px solid rgb(159, 172, 230);
+    animation: animate 2s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+  /* loader css end */
+
+
+  /* error page css */
+  .error-page{
+    flex-direction: column;
+
+  }
+  .error-page-heading,.page-not-found{
+    font-size: 8em;
+    line-height: 1;
+    background-image: linear-gradient(90deg, rgb(116, 235, 213) 0%, rgb(159, 172, 230) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .page-not-found{
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .page-p{
+    font-size: 25px;
+  }
+  .error-button{
+    padding: 10px 35px;
+  }

@@ -1,0 +1,265 @@
+[06-Sep-2022 09:19:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastName' in 'field list' in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(149): query->insert('INSERT INTO use...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:20:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastName' in 'field list' in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(149): query->insert('INSERT INTO use...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:22:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:24:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:24:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:26:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:33:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:34:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:39:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:39:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:42:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(151): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:43:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(151): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:44:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(151): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:47:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(151): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:52:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(150): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:53:51 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) or const (T_CONST) in /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php on line 189
+[06-Sep-2022 09:54:29 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) or const (T_CONST) in /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php on line 190
+[06-Sep-2022 09:55:18 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) or const (T_CONST) in /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php on line 190
+[06-Sep-2022 09:56:04 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) or const (T_CONST) in /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php on line 190
+[06-Sep-2022 09:56:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(151): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 09:57:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/tz39s0p4a422/public_html/intrboLive/model/query.php:42
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/model/query.php(42): PDOStatement->execute(Array)
+#1 /home/tz39s0p4a422/public_html/intrboLive/app/controller/Authorization.php(151): query->insert('INSERT INTO otp...', Array)
+#2 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(45): Authorization->registeration()
+#3 [internal function]: {closure}('intrboLive/api/...', 'intrboLive')
+#4 /home/tz39s0p4a422/public_html/intrboLive/router/router.php(96): call_user_func(Object(Closure), 'intrboLive/api/...', 'intrboLive')
+#5 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(74): dispatch('intrboLive/api/...')
+#6 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#7 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/model/query.php on line 42
+[06-Sep-2022 13:05:03 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/router/root.php on line 62
+[06-Sep-2022 13:20:27 UTC] PHP Warning:  require_once(view/page/404-page.html): failed to open stream: No such file or directory in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 92
+[06-Sep-2022 13:20:27 UTC] PHP Fatal error:  require_once(): Failed opening required 'view/page/404-page.html' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 92
+[06-Sep-2022 13:23:21 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/router/root.php on line 30
+[07-Sep-2022 04:56:35 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 11
+[07-Sep-2022 06:18:50 UTC] PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /home/tz39s0p4a422/public_html/intrboLive/router/router.php:77
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(76): dispatch('intrboLive/logi...')
+#1 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#2 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 77
+[07-Sep-2022 06:19:27 UTC] PHP Fatal error:  Uncaught Error: Object of class Closure could not be converted to string in /home/tz39s0p4a422/public_html/intrboLive/router/router.php:76
+Stack trace:
+#0 /home/tz39s0p4a422/public_html/intrboLive/router/root.php(76): dispatch('intrboLive/api/...')
+#1 /home/tz39s0p4a422/public_html/intrboLive/index.php(9): require_once('/home/tz39s0p4a...')
+#2 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:36:01 UTC] PHP Notice:  Undefined variable: url in /home/tz39s0p4a422/public_html/intrboLive/router/root.php on line 73
+[07-Sep-2022 06:40:57 UTC] PHP Notice:  Undefined variable: p in /home/tz39s0p4a422/public_html/intrboLive/router/root.php on line 73
+[07-Sep-2022 06:44:23 UTC] PHP Notice:  Undefined variable: matches in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 75
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Delimiter must not be alphanumeric or backslash in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Delimiter must not be alphanumeric or backslash in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Delimiter must not be alphanumeric or backslash in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Delimiter must not be alphanumeric or backslash in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Delimiter must not be alphanumeric or backslash in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 06:45:22 UTC] PHP Warning:  preg_match(): Unknown modifier '/' in /home/tz39s0p4a422/public_html/intrboLive/router/router.php on line 76
+[07-Sep-2022 07:26:05 UTC] PHP Parse error:  syntax error, unexpected 'basename' (T_STRING), expecting ')' in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 7
+[07-Sep-2022 07:30:29 UTC] PHP Fatal error:  Uncaught Error: Class 'server' not found in /home/tz39s0p4a422/public_html/intrboLive/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 7
+[07-Sep-2022 07:31:04 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:13 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:13 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:13 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:25 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:25 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:28 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:28 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8
+[07-Sep-2022 07:31:28 UTC] PHP Notice:  Undefined variable: domin in /home/tz39s0p4a422/public_html/intrboLive/index.php on line 8

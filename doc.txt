@@ -1,0 +1,7 @@
+   $prameter = server::prameter();
+
+  $validate = new validateVarible($prameter[1]);
+
+  $url = server::url();
+
+  print_r($validate->cleanInput());

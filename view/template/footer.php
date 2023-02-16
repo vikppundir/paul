@@ -1,0 +1,1 @@
+<script src="./asset/js/admin/script.js"></script>
