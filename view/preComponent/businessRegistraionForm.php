@@ -1,6 +1,5 @@
  
  <style> #mainbox{display:none} </style>
- <?php skin('businessRegistrationForm') ?>
  <div class="container">
     <div class="row justify-content-center">
       <div class="col-11 col-sm-10 col-md-10 col-lg-8 col-xl-8 text-center p-0 mt-3 mb-2">
