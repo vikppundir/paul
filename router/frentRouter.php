@@ -55,7 +55,7 @@ $router->before('GET|POST', '/business/.*', function() {
    
    
   // start single page router
-   $router->get('/business/registration', function ()
+   $router->get('/mentor/registration', function ()
    {
       
       view('Registration');
