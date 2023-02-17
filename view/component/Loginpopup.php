@@ -1,4 +1,5 @@
 <?php skin('LoginPopupCsss') ?>
+<?php $google = new loginWithGoogle()  ?>
 <section id="login">
         <div class="main-form ">
             <div class="container">
@@ -42,7 +43,7 @@
                                             <div class="google">
                                                 <button class="btn"><span> <img
                                                             src="../Paul/images/connexion-google.svg"
-                                                            alt=""></span>Google</button>
+                                                            alt=""></span><?= $google->button('Google'); ?></button>
                                             </div>
                                         </div>
                                         <div class="sign-text">
@@ -67,7 +68,7 @@
                                         </div>
                                         <div class="google">
                                             <button class="btn"><span> <img src="../Paul/images/connexion-google.svg"
-                                                        alt=""></span>Sign up with Google</button>
+                                                        alt=""></span><?= $google->button('Sign up with Google');?></button>
                                         </div>
                                         <div id="sign-mail" class="sign-email">
                                             <button class="btn"><span> <img src="../Paul/images/connexion-mail.svg"
@@ -148,7 +149,7 @@
                                             <div class="google">
                                                 <button class="btn"><span> <img
                                                             src="../Paul/images/connexion-google.svg"
-                                                            alt=""></span>Google</button>
+                                                            alt=""></span><?= $google->button();?></button>
                                             </div>
                                         </div>
                                         <div class="sign-text">
