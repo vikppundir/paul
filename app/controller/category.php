@@ -72,8 +72,7 @@
     public function offSetPagination($limit,$pageNumber){
         
           $offset =  ($pageNumber -1) * $limit;
-         return query()->select("SELECT c1.* FROM  {$this->table} c1 LEFT JOIN category c2 on c2.id = c1.parentId ORDER BY COALESCE(c2.id, c1.id), c1.id and c1.is_active = 1 limit {$limit} offset {$offset}");
-
+          return query()->select("SELECT c1.* FROM  {$this->table} c1 LEFT JOIN category c2 on c2.id = c1.parentId where c1.type ='{$this->type}' ORDER BY COALESCE(c2.id, c1.id), c1.id and c1.is_active = 1 limit {$limit} offset {$offset}");
         
     }
     
