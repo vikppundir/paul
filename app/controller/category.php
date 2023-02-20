@@ -11,14 +11,15 @@
      
      protected $table = 'category';
      
-    function __construct($id= null,$name=null,$pID = null,$url=null,$title = null ,$descrption =null,$json = null){
+    function __construct(array $pram=null){
         
-        $this->id      = $id??isset($_POST['id']) ? $_POST['id'] : null;
-        $this->name    = $name??isset($_POST['category']) ? $_POST['category'] : null;
-        $this->prentId = $pID??isset($_POST['prentCategory']) ? $_POST['prentCategory'] : null;
-        $this->title   = $title??isset($_POST['title']) ? $_POST['title'] : null;
-        $this->desc    = $descrption??isset($_POST['descrption']) ? $_POST['descrption'] : null;
-        $this->json    = $json??isset($_POST['json'])? $_POST['json'] : null;
+        $this->id      = $pram['id']??isset($_POST['id']) ? $_POST['id'] : null;
+        $this->name    = $pram['name']??isset($_POST['category']) ? $_POST['category'] : null;
+        $this->prentId = $pram['pID']??isset($_POST['prentCategory']) ? $_POST['prentCategory'] : null;
+        $this->title   = $pram['title']??isset($_POST['title']) ? $_POST['title'] : null;
+        $this->desc    = $pram['descrption']??isset($_POST['descrption']) ? $_POST['descrption'] : null;
+        $this->type    = $pram['type']??isset($_POST['type']) ? $_POST['type'] : 'main';
+        $this->json    = $pram['json']??isset($_POST['json'])? $_POST['json'] : null;
         if(isset($_POST['action']) && $_POST['action'] == 'create'): 
               $this->url  =strtolower(str_replace(' ','-',$this->name));
             else:
@@ -32,7 +33,7 @@
     
     private function create(){
   
-     query()->insert("insert into {$this->table} (name,parentId,url) VALUES(?,?,?)",[$this->name,$this->prentId,$this->url]);
+     query()->insert("insert into {$this->table} (name,parentId,url,type) VALUES(?,?,?,?)",[$this->name,$this->prentId,$this->url,$this->type]);
         
     }
     
@@ -68,6 +69,40 @@
     }
     
     
+    public function offSetPagination($limit,$pageNumber){
+        
+          $offset =  ($pageNumber -1) * $limit;
+         return query()->select("SELECT c1.* FROM  {$this->table} c1 LEFT JOIN category c2 on c2.id = c1.parentId ORDER BY COALESCE(c2.id, c1.id), c1.id and c1.is_active = 1 limit {$limit} offset {$offset}");
+
+        
+    }
+    
+    private function HTML($response){
+        
+         foreach(json_decode($response)->data as $menu): ?>
+                
+                        <div class="allpages-cat-inner d-flex align-items-center">
+                            <div class="page-name">
+                                <h3><?php if($menu->parentId != 0 ) echo '--' ;  ?> <?php echo $menu->name ?></h3>
+                                <div class="pagemeta">
+                                    <ul>
+                                        <li><a href="<?= ABSPATH ?>admin/category?id=<?php echo $menu->id ?>&name=<?php echo $menu->name ?>">Edit</a></li>
+                                        <li><a href="">Delete</a></li>
+                                        <li><a href="<?= ABSPATH ?>admin/category?id=<?php echo $menu->id ?>&name=<?php echo $menu->name ?>">View</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="page-author">
+                                <h3><?php echo $menu->postCount ?></h3>
+                            </div>
+                            <div class="page-date">
+                               <?php echo date('d-M-Y',strtotime($menu->created_at)) ?>
+                            </div>
+                        </div>
+         <?php endforeach;
+         
+    }
+    
     public function init(){
         
          $response = array();
@@ -99,14 +134,26 @@
               print_r($this->ChildById());
               return;
               
-          endif;        
+          endif;   
+          
+          
+        if(isset($_POST['action']) && $_POST['action'] == 'pagination'):
+            
+             $limit = requestPrameter('limit');
+             $pageNumber = requestPrameter('pageNumber');
+              $response = $this->offSetPagination($limit,$pageNumber);
+              $response = $this->HTML($response);
         
+        endif;
         else:
+            
            $response['errMsg'] = 'bad Rquest';
            $response['code'] = 4;
         endif;
-
+      if( $_POST['action'] != 'pagination'):
        print_r(json_encode($response));
+      endif;
     }
      
  }
+    

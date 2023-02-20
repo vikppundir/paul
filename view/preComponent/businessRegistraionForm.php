@@ -62,26 +62,24 @@
                     </div>
                   </label>
                 </div>
-                <div class="business-gallery">
-                  <label class="fieldlabels">Image Gallery</label>
-                    <br/>
-                    <ul id="photos_clearing" class="clearing-thumbs" data-clearing>
-                    </ul>
-                    <br/>
-                    <label for='photos'>Add some pics?:</label>
-                    <input type="file" id="photos" name="photos[]" multiple/>
-                </div>
-                <label class="fieldlabels">Description</label>
+                <h2 class="fs-title">About Me</h2>
+                <label class="fieldlabels">Short Description (Maximum 100 character)</label>
               <textarea name="businessBio" placeholder="I’m Noah, mentor of 45 year experience. I firstly worked as a HR in WMI Company for 3 years." ></textarea>
               <hr>
-              <h2 class="fs-title">About Me</h2>
+              <h2 class="fs-title">About Profile</h2>
                 <label class="fieldlabels">Description: *</label>
-              <textarea name="aboutMe" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" ></textarea>  
+              <textarea name="aboutMe" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"><?= $data->businessBio??'' ?></textarea>  
               <hr>
               <h2 class="fs-title">My Experience</h2>
-              <label class="fieldlabels">Add Field Name</label>
-              <input type="text" name="expField" value="" placeholder="Add Field e.g. Bank" />
-              <label class="fieldlabels">Description: *</label>
+              <div class="servicetypemain" id="sermbo" >
+                <select name="my-exp">
+                  <option value="">Choose Experience</option>
+                 
+              </select>
+              
+              <label class="fieldlabels">Description: *</label>    
+              </div>
+              
               <textarea name="expFieldDescription" placeholder="I’ll help you create a brand that is instantly recognizable and memorable." ></textarea>  
               
               <div class="addmoreservice">
@@ -103,10 +101,14 @@
                 </div>
                 <h2 class="fs-title">Experience</h2>
                 <h3 class="fs-title-h3">Contact Details</h3>
-                <label class="fieldlabels">Phone Number</label>
+                <label class="fieldlabels">First Name</label>
+              <input type="text" name="firstName" value="<?= $data->busnissName??'' ?>" placeholder="Enter Your First Name " />
+              <label class="fieldlabels">Last Name</label>
+              <input type="text" name="lastName" value="" placeholder="Enter Your Last Name " />
+              <label class="fieldlabels">Phone Number</label>
               <input type="email" name="contactNumber" value="" placeholder="Enter Your Contact Number " />
               <label class="fieldlabels">Email Address</label>
-              <input type="email" name="email" value="" placeholder="Enter Your Email Address" />
+              <input type="email" name="email" value="<?= $data->BusinessEmail??'' ?>" placeholder="Enter Your Email Address" />
               
               <hr>
               <h3 class="fs-title-h3">Service area</h3>
@@ -316,13 +318,11 @@
                     <h2 class="steps">Step 3 - 4</h2>
                   </div>
                 </div>
-
-                
                 
                 
                 <div class="servicemainbox">
                     
-               <?php $category = new category();  ?>
+               <?php $category = new category(['type=>service']);  ?>
                
                <?php $categorybusniss = $category->ChildById(0);   ?>
                   
@@ -348,9 +348,6 @@
                 <?php if(isset($data->Services)): ?>
                 <?php $service = json_decode($data->Services) ?>
                 
-               
-                   
-                 
                  
                  <h2 class="fs-title">My Skills</h2>
                  
@@ -383,22 +380,31 @@
                       </div>
                       
                     </div>
+                    <div class="addmoreservice">
+                    <button class="addmoreservicebtn addservice">Add More Service</a>
+                    <button class="addmoreservicebtn remove">Remove</a>
+                </div>
                   </div>
                   
                   <hr>
                   
                   <h3 class="fs-title-h3">My Information</h3>
-                  <input type="text" value="45" name="year-exp-num">
-                  <input type="text" value="Year Experience" name="year-exp">
+                  <label>Year Experience</label>
+                  <input type="number" value="" name="addexperience">
+                  <label>Regular clients</label>
+                  <input type="number" value="" name="regularClient">
+                  
+                  <label>Happy Clients</label>
+                  <input type="number" value="" name="happyClients">
+                  
+                  <label>Projects Complete</label>
+                  <input type="number" value="" name="projectsComplete">
                   
                       
                   <?php endif; ?>
                   
                 </div>
-                <div class="addmoreservice">
-                  <button class="addmoreservicebtn addservice">Add More Service</a>
-                    <button class="addmoreservicebtn remove">Remove</a>
-                </div>
+                
 
               </div>
               <input type="button" name="next" class="next action-button" onclick="businessRegistration(); return false" value="Submit" />

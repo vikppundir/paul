@@ -19,13 +19,18 @@
                         <div class="cross-two"></div>
                     </div>
                     <ul class="d-flex gap30 justify-content-end align-items-center">
-                        <li class="list-none"><a href="https://paul.formalmonkey.com/" class="relative">Home</a></li>
-                        <li class="list-none"><a href="https://paul.formalmonkey.com/mentor" class="relative">Mentor</a></li>
+                        <li class="list-none"><a href="<?= ABSPATH ?>" class="relative">Home</a></li>
+                        <li class="list-none"><a href="<?= ABSPATH ?>mentor" class="relative">Mentor</a></li>
 <li class="list-none"><a href="https://paul.formalmonkey.com/mentorees" class="relative">Mentoree</a></li>
-                           <li class="list-none"><a href="https://paul.formalmonkey.com/search" class="relative">Find A Mentor</a></li>
+                           <li class="list-none"><a href="<?= ABSPATH ?>search" class="relative">Find A Mentor</a></li>
                         
                         <li class="list-none d-flex">
-                            <div class="btn-login-mentor cursor-pointer"><a href="#">Become A Mentor</a></div>
+                            <?php if(is_login()): ?>
+                                <div class="btn-login-mentor cursor-pointer"><a href="<?= ABSPATH ?>mentor/registration">Become A Mentor</a></div>
+                              <?php else: ?>
+                                <div class="btn-login-mentor cursor-pointer mentor-sign-up"><a >Login/Signup</a></div>
+
+                             <?php endif; ?>
                         </li>
 
                     </ul>

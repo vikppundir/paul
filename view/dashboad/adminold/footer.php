@@ -1,0 +1,1 @@
+<script src="<?php echo ABSPATH; ?>asset/js/admin/script.js"></script>

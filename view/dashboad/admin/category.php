@@ -1,102 +1,88 @@
-<style>
-   .w-40{width:40%;}
-   .p-05 {
-   padding: 0.5rem !important;
-   }
-</style>
 
     <?php  $categoryName = isset($_REQUEST['name']) ? strip_tags($_REQUEST['name']) : null ; ?> ?>
     <?php  $categoryId =  isset($_REQUEST['id']) ? strip_tags($_REQUEST['id']) : null ; ?>
-    <?php  $categorysql = sql("select * from category where id !='{$categoryId}' and parentId IN('',0)")->data; ?>
-    <?php  $categoryMenu = sql("SELECT c1.* FROM category c1 LEFT JOIN category c2 on c2.id = c1.parentId ORDER BY COALESCE(c2.id, c1.id), c1.id")->data; ?>
-    <?php  $categorySignle = sql("select * from category where id='{$categoryId}' and name = '{$categoryName}' ")->data[0]; ?>
+    <?php  $categorysql = sql("select * from category where id !='{$categoryId}' and parentId IN('',0) and is_active = 1")->data; ?>
+    <?php  $categoryMenu = sql("SELECT c1.* FROM category c1 LEFT JOIN category c2 on c2.id = c1.parentId ORDER BY COALESCE(c2.id, c1.id), c1.id and c1.is_active = 1 limit 10")->data; ?>
+    <?php  $categorySignle = sql("select * from category where id='{$categoryId}' and name = '{$categoryName}' and is_active = 1")->data[0]??null; ?>
+    <?php  $categoryCount = sql("select count(*) as count from category where  is_active = 1") ?>
+   
     
-<main>
-   <section class="sidebar">
-      <aside>
-         <div class="side-menubox">
-            <div class="input-group-prepend justify-content-center">
-               <button class="btn bg-white p-1"><a href="<?= ABSPATH ?>admin/category#popup" class="button-link-design p-2">Add new</a></button> 
+<div class="main-content d-flex">
+        <div class="add-cat-main">
+            <div class="head">
+                <h3>Add Category</h3>
             </div>
-            <div class="input-group-prepend">
-               <input type="search" class="form-control outline-none no-border mt-3 mb-6 w-96" placeholder="Type Something here..">
+            <div class="add-cat-form">
+                <form  method="post" id="categoryCreate">
+                    <div class="form-group">
+                        <label for="">Category Name</label>
+                        <input type="text" name="category" id="category">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Parent Category</label>
+                        <select name="prentCategory" id="prentCategory">
+                         <option value="0">No parent Category</option>
+                          <?php  foreach($categorysql as $cat): ?>
+                           <option value="<?php echo $cat->id;  ?>"><?php echo $cat->name;  ?></option>
+                          <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div id="errs"></div>
+                    <div class="stust-publish-btn">
+                        <a  class="dash-btn" onclick="createCategory(); return false;">Publish</a>
+                    </div>
+                </form>
             </div>
-            <div class="side-titlebox d-flex align-items-center justify-content-between ">
-               <h4>Category</h4>
-               <i class="bi bi-person-circle"></i>
-            </div>
-            <ul class="nav nav-pills">
+        </div>
+        <aside class="cat-sidebar">
+            <div class="allpagescat">
+                <div class="head">
+                    <h3>All Categories</h3>
+                </div>
+                
+                <div class="allpages-cat">
+                    <div class="allpages-cat-head">
+                        
+                        <div class="allpages-cat-inner d-flex">
+                            <div class="page-name">
+                                <h3>Catogry Name</h3>
+                            </div>
+                            <div class="page-author">
+                                <h3>Count</h3>
+                            </div>
+                            <div class="page-date">
+                                <h3>Date</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="allpage-list">
+                        
                 <?php foreach($categoryMenu as $menu): ?>
-               <li class="nav-item">
-                  <a class="nav-link" href="<?= ABSPATH ?>admin/category?id=<?php echo $menu->id ?>&name=<?php echo $menu->name ?>">
-                     <div class="col"><?php if($menu->parentId != 0 ) echo '--' ;  ?> <?php echo $menu->name ?></div>
-                     <div class="arrow d-flex align-items-center"><i class="bi bi-trash"></i></div>
-                  </a>
-               </li>
+                        <div class="allpages-cat-inner d-flex align-items-center">
+                            <div class="page-name">
+                                <h3><?php if($menu->parentId != 0 ) echo '--' ;  ?> <?php echo $menu->name ?></h3>
+                                <div class="pagemeta">
+                                    <ul>
+                                        <li><a href="<?= ABSPATH ?>admin/category?id=<?php echo $menu->id ?>&name=<?php echo $menu->name ?>">Edit</a></li>
+                                        <li><a href="">Delete</a></li>
+                                        <li><a href="<?= ABSPATH ?>admin/category?id=<?php echo $menu->id ?>&name=<?php echo $menu->name ?>">View</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="page-author">
+                                <h3><?php echo $menu->postCount ?></h3>
+                            </div>
+                            <div class="page-date">
+                               <?php echo date('d-M-Y',strtotime($menu->created_at)) ?>
+                            </div>
+                        </div>
                <?php endforeach; ?>
-            </ul>
-         </div>
-      </aside>
-   </section>
-
-   <?php if(isset($_REQUEST['name']) && !empty($categorySignle)): ?>
-   <section class="body float-right w-85 d-flex mt-12">
-      <section class="w-100 mt-6 ms-6">
-         <form method="post" id="categoryupdate">
-             <div id="errs"></div>
-            <div class="row">
-               <label for="category">Categry Name</label>
-               <input type="text" name="category" id="category" value="<?php echo strip_tags($categorySignle->name)  ?>" class="form-control outline-none border border-primary w-40 .p-05" >
+           
+                    </div>
+                        <div data-count="<?= $categoryCount->data[0]->count; ?>" limit="10" step="1" style="display:none" class="data-count"></div>
+               <div class="pagination-recent-post pagination view-more-button" data-count="<?= $categoryCount->data[0]->count; ?>" id="pagination">
+               </div>
+                </div>
             </div>
-            <div class="row mt-2">
-               <label for="prentCategory">Select Parent</label>
-               <select name="prentCategory" id="prentCategory" class="form-control outline-none border border-primary w-40 .p-05" >
-                    <option value="0">No parent Category</option>
-                  <?php  foreach($categorysql as $cat): ?>
-                     <option <?php if($categorySignle->parentId == $cat->id) echo "selected"; ?> value="<?php echo $cat->id;  ?>"><?php echo $cat->name;  ?></option>
-                  <?php endforeach; ?>               
-                  </select>
-            </div>
-            <div class="row mt-2">
-               <label for="metaTitle">Meta Title</label>
-               <input type="text" name="title" id="metaTitle" value="<?php echo $categorySignle->title ?>" class="form-control outline-none border border-primary w-40 .p-05 " >
-            </div>
-            <div class="row mt-2">
-               <label for="Discription">Discription</label>
-               <textarea type="text" name="descrption" id="Discription"class="form-control outline-none border border-primary w-40 .p-05 " ><?php echo $categorySignle->deccription ?></textarea>
-            </div>
-            
-             <div class="row mt-2">
-                  <input type="hidden"  name="id" value="<?php echo strip_tags($categorySignle->id)?>">
-
-                 <input type="submit" name="update" class="btn bg-white p-2 .p-05 mt-2 w-40" name="submit">
-             </div>
-         </form>
-      </section>
-   </section>
-   <?php endif;  ?>
-   
-   
-   <form method="post" id="categoryCreate">
-      <div class="input-group">
-         <div id="popup" class="pop-up-design rounded">
-             <div id="errs"></div>
-            <div class="" style="disply:flex;">
-               <label for="category">Categry Name</label>
-               <input type="text" name="category" id="category" class="form-control outline-none border border-primary p-05" >
-            </div>
-            <div class="mt-2">
-               <select name="prentCategory" id="prentCategory" class="form-control outline-none border border-primary p-05" >
-                  <option value="0">No parent Category</option>
-                  
-                  <?php  foreach($categorysql as $cat): ?>
-                  <option value="<?php echo $cat->id;  ?>"><?php echo $cat->name;  ?></option>
-                  <?php endforeach; ?>
-               </select>
-               <button class="btn bg-white p-2 .p-05 mt-2" onclick="createCategory(); return false;">Save</button>
-               <button class="btn bg-white p-2 .p-05 mt-2"> <a class="close-modal button-link-design">Close</a></button>
-            </div>
-         </div>
-      </div>
-   </form>
-</main>
+        </aside>
+    </div>

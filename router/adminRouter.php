@@ -14,6 +14,7 @@ $router->mount('/admin', function () use ($router)
         if(!is_admin()): header("Location:".ABSPATH); endif;
         endif;
         viewD('admin/header');
+        viewD('admin/sidebar');
         viewD('admin/dashboad');
         viewD('admin/footer');
 
@@ -24,6 +25,7 @@ $router->mount('/admin', function () use ($router)
         $catOBJ = new category();
         $catOBJ->update();
          viewD('admin/header');
+         viewD('admin/sidebar');
          viewD('admin/category');
          viewD('admin/footer');
   

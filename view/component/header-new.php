@@ -24,8 +24,10 @@
 <li class="list-none"><a href="https://paul.formalmonkey.com/mentorees" class="relative">Mentoree</a></li>
                            <li class="list-none"><a href="https://paul.formalmonkey.com/search" class="relative">Find A Mentor</a></li>
                         
-                        <li class="list-none d-flex">
-                            <div class="btn-login-mentor cursor-pointer mentor-sign-up"><a href="#">Become A Mentor</a></div>
+                       <li class="list-none d-flex">
+                         
+                                <div class="btn-login-mentor cursor-pointer"><a href="#">Become A Mentor</a></div>
+                           
                         </li>
 
                     </ul>

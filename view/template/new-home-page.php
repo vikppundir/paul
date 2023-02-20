@@ -1,5 +1,5 @@
 <?php component('html-head-new') ?>
-<?php component('Header') ?>
+<?php component('header-new') ?>
 <?php component('Hero') ?>
 <?php component('trader-new') ?>
 <?php component('mentor') ?>
