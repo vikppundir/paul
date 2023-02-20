@@ -32,7 +32,20 @@ $router->mount('/admin', function () use ($router)
 
     });
 
+    $router->match('GET|POST','/my-experience', function ()
+    {    
+        $catOBJ = new category();
+        $catOBJ->update();
+         viewD('admin/header');
+         viewD('admin/sidebar');
+         viewD('admin/category');
+         viewD('admin/footer');
+  
 
-    
+    });
+
+
+   
+
   
 });
