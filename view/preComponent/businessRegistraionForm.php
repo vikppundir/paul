@@ -122,7 +122,6 @@
                   </div>
 
                 </div>
-                
                 <hr>
                 
                 <h3 class="fs-title-h3">Qualification</h3>
