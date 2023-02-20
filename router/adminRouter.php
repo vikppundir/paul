@@ -32,15 +32,20 @@ $router->mount('/admin', function () use ($router)
   
 
     });
-    $router->match('GET|POST','/category/{name}', function ($name)
+    $router->match('GET|POST','/category/{name}', function ($name) use($router)
     {    
+        global $type;
         $catOBJ = new category();
+        if($name == 'my-experience'): 
         $type = $name;
         $catOBJ->update();
          viewD('admin/header');
          viewD('admin/sidebar');
          viewD('admin/category');
          viewD('admin/footer');
+         else:
+             $router->trigger404(); return;
+        endif;
   
 
     });

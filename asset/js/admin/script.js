@@ -100,7 +100,7 @@ function createCategory(e){
 	//	for(var i = 0;i < data.length;++i) {
 			switch(data.code) {
 			case 0:
-				window.location = projectName+'admin/category/?name='+data.name;
+				location.reload();
 				break;
 			case 1:
 				document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces,number, and hyphens)</div>';

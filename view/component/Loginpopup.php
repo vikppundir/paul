@@ -9,12 +9,13 @@
                         <div class="form-box d-flex align-items-center justify-content-center">
 
                             <!-- login -->
+                            <form id="loginForm">
                             <div class="login-main relative pd50">
                                 <div class="cross-pop-up cursor-pointer">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
                                 <div class="login-inner">
-
+                                
                                     <div class="login-box">
                                         <div class="title">
                                             <h3 class="textcenter">Log in</h3>
@@ -32,7 +33,7 @@
                                             </label>
                                         </div>
                                         <div class="login-bttn">
-                                            <button class="btn">Login</button>
+                                            <button class="btn" onclick="login(); return false" >Login</button>
                                         </div>
                                         <div class="bttn-box">
                                             <div class="facebook">
@@ -55,6 +56,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- signup -->
                                 <div class="signup-box">
 
