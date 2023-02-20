@@ -24,12 +24,12 @@
                                     <div class="input-box">
                                         <div class="email-address">
                                             <label for="">E-mail Address
-                                                <input type="email" placeholder="E-mail Address">
+                                                <input type="email" name="email" placeholder="E-mail Address">
                                             </label>
                                         </div>
                                         <div class="password">
                                             <label for="">Password
-                                                <input type="password" placeholder="Password">
+                                                <input type="password"  name="password" placeholder="Password">
                                             </label>
                                         </div>
                                         <div class="login-bttn">
