@@ -3,9 +3,9 @@
     <?php  $categoryName = isset($_REQUEST['name']) ? strip_tags($_REQUEST['name']) : null ; ?> ?>
     <?php  $categoryId =  isset($_REQUEST['id']) ? strip_tags($_REQUEST['id']) : null ; ?>
     <?php  $categorysql = sql("select * from category where id !='{$categoryId}' and parentId IN('',0) and is_active = 1")->data; ?>
-    <?php  $categoryMenu = sql("SELECT c1.* FROM  {$this->table} c1 LEFT JOIN category c2 on c2.id = c1.parentId where c1.type ='{$this->type}' ORDER BY COALESCE(c2.id, c1.id), c1.id and c1.is_active = 1 limit 10")->data; ?>
+    <?php  $categoryMenu = sql("SELECT c1.* FROM category c1 LEFT JOIN category c2 on c2.id = c1.parentId where c1.type='{$type}' ORDER BY COALESCE(c2.id, c1.id), c1.id and c1.is_active = 1 limit 10")->data; ?>
     <?php  $categorySignle = sql("select * from category where id='{$categoryId}' and name = '{$categoryName}' and is_active = 1")->data[0]??null; ?>
-    <?php  $categoryCount = sql("select count(*) as count from category where type='{$type}' and  is_active = 1") ?>
+    <?php  $categoryCount = sql("select count(*) as count from category  where type='{$type}' and  is_active = 1") ?>
    
     
 <div class="main-content d-flex">

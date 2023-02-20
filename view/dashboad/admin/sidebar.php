@@ -12,7 +12,7 @@
                 <li><a href="#" ><i class="fa-solid fa-box"></i> Menu Layout</a></li>
                 <li><a href="#"><i class="fa-solid fa-basket-shopping"></i> E-Commerce</a></li>
                 <li><a href="<?=ABSPATH ?>admin/category"><i class="fa-solid fa-inbox"></i> Category</a></li>
-                <li><a href="<?=ABSPATH ?>admin/my-experience"><i class="fa-solid fa-inbox"></i>  My Experience</a></li>
+                <li><a href="<?=ABSPATH ?>admin/category/my-experience"><i class="fa-solid fa-inbox"></i>  My Experience</a></li>
                 <li><a href="#"><i class="fa-solid fa-blanket"></i> File Manager</a></li>
                 <li><a href="#"><i class="fa-solid fa-box"></i> Point of Sale</a></li>
                 <li><a href="#"><i class="fa-solid fa-message"></i> Chat</a></li>

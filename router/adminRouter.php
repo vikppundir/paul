@@ -32,7 +32,7 @@ $router->mount('/admin', function () use ($router)
   
 
     });
-    $router->match('GET|POST','/category/type/{name}', function ($name)
+    $router->match('GET|POST','/category/{name}', function ($name)
     {    
         $catOBJ = new category();
         $type = $name;
