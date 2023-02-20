@@ -20,9 +20,10 @@ $router->mount('/admin', function () use ($router)
 
     });
 
-    $router->match('GET|POST','/category', function ()
+    $router->match('GET|POST','/category/', function ()
     {    
         $catOBJ = new category();
+
         $catOBJ->update();
          viewD('admin/header');
          viewD('admin/sidebar');
@@ -31,10 +32,10 @@ $router->mount('/admin', function () use ($router)
   
 
     });
-
-    $router->match('GET|POST','/my-experience', function ()
+    $router->match('GET|POST','/category/type/{name}', function ($name)
     {    
         $catOBJ = new category();
+        $type = $name;
         $catOBJ->update();
          viewD('admin/header');
          viewD('admin/sidebar');
@@ -43,9 +44,6 @@ $router->mount('/admin', function () use ($router)
   
 
     });
-
-
-   
 
   
 });
