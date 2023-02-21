@@ -64,11 +64,11 @@
                 </div>
                 <h2 class="fs-title">About Me</h2>
                 <label class="fieldlabels">Short Description (Maximum 100 character)</label>
-              <textarea name="businessBio" placeholder="I’m Noah, mentor of 45 year experience. I firstly worked as a HR in WMI Company for 3 years." ></textarea>
+              <textarea name="aboutMe" placeholder="I’m Noah, mentor of 45 year experience. I firstly worked as a HR in WMI Company for 3 years." ><?= $data->businessBio??'' ?></textarea>
               <hr>
               <h2 class="fs-title">About Profile</h2>
                 <label class="fieldlabels">Description: *</label>
-              <textarea name="aboutMe" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"><?= $data->businessBio??'' ?></textarea>  
+              <textarea name="businessBio" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"></textarea>  
               <hr>
               <h2 class="fs-title">My Experience</h2>
               <div id="expriceMain">
@@ -103,13 +103,13 @@
                 <h2 class="fs-title">Experience</h2>
                 <h3 class="fs-title-h3">Contact Details</h3>
                 <label class="fieldlabels">First Name</label>
-              <input type="text" name="firstName" value="<?= $data->busnissName??'' ?>" placeholder="Enter Your First Name " />
+              <input type="text" name="Firstname" value="<?= $data->busnissName??'' ?>" placeholder="Enter Your First Name " />
               <label class="fieldlabels">Last Name</label>
-              <input type="text" name="lastName" value="" placeholder="Enter Your Last Name " />
+              <input type="text" name="Lastname" value="" placeholder="Enter Your Last Name " />
               <label class="fieldlabels">Phone Number</label>
-              <input type="email" name="contactNumber" value="" placeholder="Enter Your Contact Number " />
+              <input type="email" name="contactNo" value="" placeholder="Enter Your Contact Number " />
               <label class="fieldlabels">Email Address</label>
-              <input type="email" name="email" value="<?= $data->BusinessEmail??'' ?>" placeholder="Enter Your Email Address" />
+              <input type="email" name="businessEmail" value="<?= $data->BusinessEmail??'' ?>" placeholder="Enter Your Email Address" />
               
               <hr>
               <h3 class="fs-title-h3">Service area</h3>
