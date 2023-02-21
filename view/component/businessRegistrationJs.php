@@ -98,10 +98,10 @@ $(document).ready(function () {
 	$(".addservice").click(function (event) {
 		event.preventDefault();
 		divcount+=1;
-		var ele = $('#mySkills').clone();
+		var ele = $('#main').clone();
 		ele.removeAttr("id");
 		ele.attr("id","sermbo"+divcount)
-		$(".servicemainbox").append(ele)
+		$("#experience").append(ele)
 
 	})
 	$(".remove").click(function (event) {
