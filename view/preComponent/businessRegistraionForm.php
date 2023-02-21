@@ -366,16 +366,11 @@
                          <h4>Select Services</h4>
                          <div class="servicebox">
                            <div class="selectservices">
-                            <div><input type="checkbox" value="" name="services-sales">Sales</div>
-                            <div><input type="checkbox" value="" name="services-marketing">Marketing</div>
-                            <div><input type="checkbox" value="" name="services-hr">HR Management</div>
-                            <div><input type="checkbox" value="" name="services-commerce">Commerce</div>
-                            <div><input type="checkbox" value="" name="services-growth">Growth</div>
-                            <div><input type="checkbox" value="" name="services-diversity">Diversity</div>
-            
+                       
                            </div>
                            
                          </div>
+              <?php endif; ?>
              <!--****************** clone code end ****************-->
                <div class="servicemainbox">
                     
@@ -424,12 +419,7 @@
                     <h4>Select Services</h4>
                     <div class="servicebox">
                       <div class="selectservices">
-                       <div><input type="checkbox" value="" name="services-sales">Sales</div>
-                       <div><input type="checkbox" value="" name="services-marketing">Marketing</div>
-                       <div><input type="checkbox" value="" name="services-hr">HR Management</div>
-                       <div><input type="checkbox" value="" name="services-commerce">Commerce</div>
-                       <div><input type="checkbox" value="" name="services-growth">Growth</div>
-                       <div><input type="checkbox" value="" name="services-diversity">Diversity</div>
+                      
        
                       </div>
                       
@@ -439,7 +429,7 @@
                     <button class="addmoreservicebtn remove">Remove</a>
                 </div>
                </div>
-                  
+               <?php endif; ?>
                   <hr>
                   
                   <h3 class="fs-title-h3">My Information</h3>
@@ -455,7 +445,7 @@
                   <input type="number" value="" name="projectsComplete">
                   
                       
-                  <?php endif; ?>
+                  
                   
                 </div>
                 
