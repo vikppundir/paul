@@ -321,7 +321,7 @@
                 
                 <div class="servicemainbox">
                     
-               <?php $category = new category(['type=>service']);  ?>
+               <?php $category = new category(['type=>main']);  ?>
                
                <?php $categorybusniss = $category->ChildById(0);   ?>
                   
@@ -357,12 +357,9 @@
                      <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
                         
-                        <option value="Building">Building</option>
-                        <option value="Tourism">Tourism</option>
-                        <option value="Hospitality">Hospitality</option>
-                        <option value="Logistics">Logistics</option>
-                        <option value="Agriculture">Agriculture</option>
-                        <option value="Accounting">Accounting</option>
+                     <?php  foreach($categorybusniss->data as $catb): ?>
+                    <option value="<?= $catb->id ?>"><?= $catb->name ?></option>
+                    <?php  endforeach; ?>
                     
                   </select>
                     

@@ -19,8 +19,11 @@
                                     <div class="login-box">
                                         <div class="title">
                                             <h3 class="textcenter">Log in</h3>
+                                          
                                         </div>
+                                       <div id="errs"> </div>
                                     </div>
+
                                     <div class="input-box">
                                         <div class="email-address">
                                             <label for="">E-mail Address
