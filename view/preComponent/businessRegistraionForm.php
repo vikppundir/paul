@@ -318,8 +318,66 @@
                   </div>
                 </div>
                 
-                
-                <div class="servicemainbox">
+                <!--****************** clone code  ****************-->
+                <div id="mySkills">
+                    
+                    <?php $category = new category(['type=>main']);  ?>
+                    
+                    <?php $categorybusniss = $category->ChildById(0);   ?>
+                       
+                      <?php $categorybusniss = json_decode($categorybusniss);  ?>
+                       
+                        <div class="servicetypemain" id="mainbox" >
+                         <label class="fieldlabels">Services Type:</label>
+                        <select name="ServicesType[]" id="" onchange="childCategory(this)">
+                          <option value="">select</option>
+                        <?php  foreach($categorybusniss->data as $catb): ?>
+                         <option value="<?= $catb->id ?>"><?= $catb->name ?></option>
+                         <?php  endforeach; ?>
+                       </select>
+     
+                            <h4>Select Services</h4>
+                         <div class="servicebox">
+                           <div class="selectservices">
+                          </div>
+                           
+                         </div>
+                    </div>
+                       
+                     <?php if(isset($data->Services)): ?>
+                     <?php $service = json_decode($data->Services) ?>
+                     
+                      
+                      <h2 class="fs-title">My Skills</h2>
+                      
+                       <div class="servicetypemain" id="sermbo" >
+                           
+                         <label class="fieldlabels">Industry</label>
+                         
+                          <select name="ServicesType[]" id="" onchange="childCategory(this)">
+                          <option value="">select</option>
+                             
+                          <?php  foreach($categorybusniss->data as $catb): ?>
+                         <option value="<?= $catb->id ?>"><?= $catb->name ?></option>
+                         <?php  endforeach; ?>
+                         
+                       </select>
+                         
+                         <h4>Select Services</h4>
+                         <div class="servicebox">
+                           <div class="selectservices">
+                            <div><input type="checkbox" value="" name="services-sales">Sales</div>
+                            <div><input type="checkbox" value="" name="services-marketing">Marketing</div>
+                            <div><input type="checkbox" value="" name="services-hr">HR Management</div>
+                            <div><input type="checkbox" value="" name="services-commerce">Commerce</div>
+                            <div><input type="checkbox" value="" name="services-growth">Growth</div>
+                            <div><input type="checkbox" value="" name="services-diversity">Diversity</div>
+            
+                           </div>
+                           
+                         </div>
+             <!--****************** clone code end ****************-->
+               <div class="servicemainbox">
                     
                <?php $category = new category(['type=>main']);  ?>
                
@@ -342,7 +400,7 @@
                      </div>
                       
                     </div>
-                  </div>
+               </div>
                   
                 <?php if(isset($data->Services)): ?>
                 <?php $service = json_decode($data->Services) ?>
@@ -380,7 +438,7 @@
                     <button class="addmoreservicebtn addservice">Add More Service</a>
                     <button class="addmoreservicebtn remove">Remove</a>
                 </div>
-                  </div>
+               </div>
                   
                   <hr>
                   

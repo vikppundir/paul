@@ -3,13 +3,10 @@
 defined('ACCESS') || header("location:../");
 
 
-$router->before('GET|POST', '/business/.*', function() {
+$router->before('GET|POST', '/mentor/.*', function() {
     
     
        if(!is_login()): header("Location:".ABSPATH); endif;
-   
-        
-
 
 });
 
