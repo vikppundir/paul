@@ -361,20 +361,17 @@
                       
                     <label class="fieldlabels">Industry</label>
                     
-                    <select name="ServicesType[]" id="" onchange="childCategory(this)">
+               <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
                    <?php  foreach($categorybusniss->data as $catb): ?>
                     <option value="<?= $catb->id ?>"><?= $catb->name ?></option>
                     <?php  endforeach; ?>
                   </select>
-
-                       <h4>Expertise</h4>
+                    
+                    <h4>Expertise</h4>
                     <div class="servicebox">
                       <div class="selectservices">
                      </div>
-                      
-                    </div>
-                  </div>
                       
                     </div>
                    
