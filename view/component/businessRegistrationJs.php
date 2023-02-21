@@ -51,7 +51,6 @@ $(document).ready(function () {
 			step: function (now) {
 				// for making fielset appear animation
 				opacity = 1 - now;
-
 				current_fs.css({
 					'display': 'none',
 					'position': 'relative'
@@ -101,7 +100,30 @@ $(document).ready(function () {
 		var ele = $('#mainbox').clone();
 		ele.removeAttr("id");
 		ele.attr("id","sermbo"+divcount)
-		$(".servicemainbox").append(ele)
+		$("#myskills").append(ele)
+
+	})
+$(".myexperience").click(function (event) {
+		event.preventDefault();
+		divcount+=1;
+		var ele = $('#myexperienceClone').clone();
+		ele.removeAttr("id");
+		ele.attr("id","sermbo"+divcount)
+		$("#expriceMain").append(ele)
+
+	})
+	$(".remove").click(function (event) {
+		event.preventDefault();
+		$("#sermbo"+divcount).remove();
+		divcount-=1;
+	})
+$(".qualificationbx").click(function (event) {
+		event.preventDefault();
+		divcount+=1;
+		var ele = $('#qualificationClone').clone();
+		ele.removeAttr("id");
+		ele.attr("id","sermbo"+divcount)
+		$("#qualificationMain").append(ele)
 
 	})
 	$(".remove").click(function (event) {

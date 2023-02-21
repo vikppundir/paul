@@ -127,3 +127,49 @@ nav ul>li>a:hover::before {
         transform: rotate(-44deg);
     }
 }
+
+.menu {
+    display: flex;
+}
+.nav-dropdown {
+    border: 1px solid lightgray;
+    padding: 4px 9px;
+    border-radius: 35px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 10px;
+position:relative;
+}
+.nav-dropdown img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 8px;
+    display: block;
+}
+.nav-dropdown ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.nav-dropdown ul ul.dropdown-mn {
+    display: none; 
+    position: absolute;
+    background: #fff;
+    z-index: 999;
+    flex-direction: column;
+    padding: 25px;
+    left: -70%;
+    box-shadow: 0 0 10px rgb(0 0 0/20%);
+    width: auto;
+    border-radius: 10px;
+}
+.nav-dropdown ul:hover .dropdown-mn{
+display:block;
+}
+.nav-dropdown ul ul.dropdown-mn li {
+    line-height: 30px;
+}
+.nav-dropdown ul ul.dropdown-mn li a::before {
+    display: none;
+}

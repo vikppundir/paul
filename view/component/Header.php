@@ -34,6 +34,18 @@
                         </li>
 
                     </ul>
+<div class="nav-dropdown">
+<ul>
+<li><i class="fas fa-bars"></i></li>
+<li><img src="https://a0.muscache.com/im/users/30619109/profile_pic/1428226760/original.jpg?aki_policy=profile_medium">
+<ul class="dropdown-mn">
+<li><a href="#">Menu</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Menu</a></li>
+</ul>
+</li>
+</ul>
+</div>
                 </div>
             </nav>
         </div>

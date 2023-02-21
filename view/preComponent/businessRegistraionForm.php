@@ -71,19 +71,20 @@
               <textarea name="aboutMe" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"><?= $data->businessBio??'' ?></textarea>  
               <hr>
               <h2 class="fs-title">My Experience</h2>
-              <div class="servicetypemain" id="sermbo" >
+              <div id="expriceMain">
+                  
+              </div>
+              <div class="servicetypemain" id="myexperienceClone" >
                 <select name="my-exp">
                   <option value="">Choose Experience</option>
-                 
               </select>
               
-              <label class="fieldlabels">Description: *</label>    
+              <label class="fieldlabels">Description: *</label>  
+              <textarea name="expFieldDescription" placeholder="I’ll help you create a brand that is instantly recognizable and memorable." ></textarea>  
               </div>
               
-              <textarea name="expFieldDescription" placeholder="I’ll help you create a brand that is instantly recognizable and memorable." ></textarea>  
-              
               <div class="addmoreservice">
-                  <button class="addmoreservicebtn addservice">Add More Experience</a>
+                  <button class="addmoreservicebtn myexperience">Add More Experience</a>
                     <button class="addmoreservicebtn remove">Remove</a>
                 </div>
               </div>
@@ -126,14 +127,19 @@
                 <hr>
                 
                 <h3 class="fs-title-h3">Qualification</h3>
+                <div id="qualificationMain"></div>
+              <div class="servicetypemain" id="qualificationClone" >
+                
                 <label class="fieldlabels">Add Qualification</label>
               <input type="email" name="qualification" value="M.Sc in bussiness" placeholder="Enter Your Qualification" />
+              </div>
+              
               <div class="addmoreservice">
-                  <button class="addmoreservicebtn addservice">Add More Qualification</a>
+                  <button class="addmoreservicebtn qualificationbx">Add More Qualification</a>
                     <button class="addmoreservicebtn remove">Remove</a>
                 </div>
 
-              <label class="fieldlabels">Business hours</label>
+              <label class="fieldlabels" style="margin-top:25px;display:inline-block;">Business hours</label>
                 <div class="businesshour-outter">
                   <div class="businesshour-inner">
                       <?php  $time = json_decode($data->Businesshours??null); ?>
@@ -329,7 +335,7 @@
                  <?php $categorybusniss = json_decode($categorybusniss);  ?>
                   
                    <div class="servicetypemain" id="mainbox" >
-                    <label class="fieldlabels">Services Type:</label>
+                    <label class="fieldlabels">Industry</label>
                    <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
                    <?php  foreach($categorybusniss->data as $catb): ?>
@@ -337,7 +343,7 @@
                     <?php  endforeach; ?>
                   </select>
 
-                       <h4>Select Services</h4>
+                       <h4>Expertise</h4>
                     <div class="servicebox">
                       <div class="selectservices">
                      </div>
@@ -350,41 +356,34 @@
                 
                  
                  <h2 class="fs-title">My Skills</h2>
-                 
+                 <div id="myskills">
                   <div class="servicetypemain" id="sermbo" >
                       
                     <label class="fieldlabels">Industry</label>
                     
-                     <select name="ServicesType[]" id="" onchange="childCategory(this)">
+                    <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
-                        
-                        <option value="Building">Building</option>
-                        <option value="Tourism">Tourism</option>
-                        <option value="Hospitality">Hospitality</option>
-                        <option value="Logistics">Logistics</option>
-                        <option value="Agriculture">Agriculture</option>
-                        <option value="Accounting">Accounting</option>
-                    
+                   <?php  foreach($categorybusniss->data as $catb): ?>
+                    <option value="<?= $catb->id ?>"><?= $catb->name ?></option>
+                    <?php  endforeach; ?>
                   </select>
-                    
-                    <h4>Select Services</h4>
+
+                       <h4>Expertise</h4>
                     <div class="servicebox">
                       <div class="selectservices">
-                       <div><input type="checkbox" value="" name="services-sales">Sales</div>
-                       <div><input type="checkbox" value="" name="services-marketing">Marketing</div>
-                       <div><input type="checkbox" value="" name="services-hr">HR Management</div>
-                       <div><input type="checkbox" value="" name="services-commerce">Commerce</div>
-                       <div><input type="checkbox" value="" name="services-growth">Growth</div>
-                       <div><input type="checkbox" value="" name="services-diversity">Diversity</div>
-       
-                      </div>
+                     </div>
                       
                     </div>
-                    <div class="addmoreservice">
+                  </div>
+                      
+                    </div>
+                   
+                  </div>
+                  </div>
+                  <div class="addmoreservice">
                     <button class="addmoreservicebtn addservice">Add More Service</a>
                     <button class="addmoreservicebtn remove">Remove</a>
                 </div>
-                  </div>
                   
                   <hr>
                   
