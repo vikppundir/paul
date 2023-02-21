@@ -70,17 +70,18 @@
                 <label class="fieldlabels">Description: *</label>
               <textarea name="aboutMe" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"><?= $data->businessBio??'' ?></textarea>  
               <hr>
-              <div class="servicetypemain" id="sermbo" >
               <h2 class="fs-title">My Experience</h2>
+              <div class="servicetypemain" id="sermbo" >
                 <select name="my-exp">
                   <option value="">Choose Experience</option>
                  
               </select>
               
-              <label class="fieldlabels">Description: *</label> 
+              <label class="fieldlabels">Description: *</label>    
+              </div>
+              
               <textarea name="expFieldDescription" placeholder="I’ll help you create a brand that is instantly recognizable and memorable." ></textarea>  
-                
-            </div>
+              
               <div class="addmoreservice">
                   <button class="addmoreservicebtn addservice">Add More Experience</a>
                     <button class="addmoreservicebtn remove">Remove</a>
