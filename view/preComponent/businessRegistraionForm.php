@@ -103,11 +103,11 @@
                 <h2 class="fs-title">Experience</h2>
                 <h3 class="fs-title-h3">Contact Details</h3>
                 <label class="fieldlabels">First Name</label>
-              <input type="text" name="Firstname" value="<?= $data->busnissName??'' ?>" placeholder="Enter Your First Name " />
+              <input type="text" name="Firstname" value="<?= user()->name ?>" placeholder="Enter Your First Name " />
               <label class="fieldlabels">Last Name</label>
-              <input type="text" name="Lastname" value="" placeholder="Enter Your Last Name " />
+              <input type="text" name="Lastname" value="<?= user()->last ?>" placeholder="Enter Your Last Name " />
               <label class="fieldlabels">Phone Number</label>
-              <input type="email" name="contactNo" value="" placeholder="Enter Your Contact Number " />
+              <input type="email" name="contactNo" value="<?= $data->contactNo??'' ?>" placeholder="Enter Your Contact Number " />
               <label class="fieldlabels">Email Address</label>
               <input type="email" name="businessEmail" value="<?= $data->BusinessEmail??'' ?>" placeholder="Enter Your Email Address" />
               
