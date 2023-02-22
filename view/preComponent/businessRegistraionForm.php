@@ -8,9 +8,8 @@
           <p>Fill all form field to go to next step</p>
           <div id="errs"> </div>
        <?php $business = new business(); ?>
-       <?php $category = new category();  ?>
        <?php $data = json_decode($business->businessById(user()->id))->data[0] ?? '' ?>
-       
+       <?php $category = new category();  ?>
         
           <form method="post" id="businessRegistration" class="msform" enctype="multipart/form-data">
             <!-- progressbar -->
@@ -72,16 +71,31 @@
               <textarea name="businessBio" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"><?= $data->businessBio??'' ?></textarea>  
               <hr>
               <h2 class="fs-title">My Experience</h2>
-              <div id="expriceMain">
-                  
-              </div>
+           
+              
+              
               <div class="servicetypemain" id="myexperienceClone" >
-                <select name="my-exp">
+                  
+                <?php $myexperience = $category->ChildById(['id'=>0,'type'=>'my-experience']);   ?>
+                
+                 <?php $myexperience = json_decode($myexperience);  ?>
+                 
+                <select name="experience">
+                  
                   <option value="">Choose Experience</option>
+                    <?php foreach($myexperience->data as $myex): ?>
+                      <option value="<?= $myex->id ?>"><?= $myex->name ?></option>
+                    <?php endforeach; ?>
+                    
+                  
               </select>
               
               <label class="fieldlabels">Description: *</label>  
-              <textarea name="expFieldDescription" placeholder="I’ll help you create a brand that is instantly recognizable and memorable." ></textarea>  
+              <textarea name="experienceDescription" placeholder="I’ll help you create a brand that is instantly recognizable and memorable." ></textarea>  
+              </div>
+              
+                 <div id="expriceMain">
+                  
               </div>
               
               <div class="addmoreservice">
@@ -329,14 +343,14 @@
                 
                 <div class="servicemainbox">
                     
-               
+             
                
                <?php $categorybusniss = $category->ChildById(['id'=>0]);   ?>
                   
                  <?php $categorybusniss = json_decode($categorybusniss);  ?>
                   
                    <div class="servicetypemain" id="mainbox" >
-                    <label class="fieldlabels">Industry</label>
+                    <label class="fieldlabels">Industry Type:</label>
                    <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
                    <?php  foreach($categorybusniss->data as $catb): ?>
@@ -344,7 +358,7 @@
                     <?php  endforeach; ?>
                   </select>
 
-                       <h4>Expertise</h4>
+                       <h4>Select Expertise</h4>
                     <div class="servicebox">
                       <div class="selectservices">
                      </div>
@@ -352,19 +366,20 @@
                     </div>
                   </div>
                   
-           
-                  <?php if(isset($data->Services)): ?>
+                <?php if(isset($data->Services)): ?>
                 <?php $service = json_decode($data->Services) ?>
                 
-               
+                 
+                 <h2 class="fs-title">My Skills</h2>
+                 <div id="myskills">
+            <?php if(isset($data->Services)): ?>
+                <?php $service = json_decode($data->Services) ?>
                    
                  <?php foreach($service as $key => $service):  $key = str_replace("type_",'',$key); ?>
                  
-                  <div class="servicetypemain" id="sermbo" >
+                  <div class="servicetypemain" id="store_<?= $key ?>" >
                       
-                    <label class="fieldlabels">Services Type:</label>
-                    
-             
+                    <label class="fieldlabels">Industry Type:</label>
                   
                      <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
@@ -373,7 +388,7 @@
                     <?php  endforeach; ?>
                   </select>
                     
-                    <h4>Select Services</h4>
+                    <h4>Select Expertise</h4>
                     <div class="servicebox">
                       <div class="selectservices">
                           
@@ -397,7 +412,7 @@
                   
                       <div class="servicetypemain" id="sermbo" >
                       
-                    <label class="fieldlabels">Services Type:</label>
+                    <label class="fieldlabels">Industry Type:</label>
                    <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
                    <?php  foreach($categorybusniss->data as $catb): ?>
@@ -405,16 +420,14 @@
                     <?php  endforeach; ?>
                   </select>
 
-                       <h4>Select Services</h4>
+                       <h4>Select Expertise</h4>
                     <div class="servicebox">
                       <div class="selectservices">
                      </div>
                       
                     </div>
-             
-                  <?php endif; ?>
-                   
                   </div>
+                  <?php endif; ?>
                   </div>
                   <div class="addmoreservice">
                     <button class="addmoreservicebtn addservice">Add More Service</a>
@@ -436,7 +449,7 @@
                   <input type="number" value="" name="projectsComplete">
                   
                       
-                
+                  <?php endif; ?>
                   
                 </div>
                 

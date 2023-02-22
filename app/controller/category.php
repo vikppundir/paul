@@ -20,6 +20,9 @@
         $this->desc    = $pram['descrption']??isset($_POST['descrption']) ? $_POST['descrption'] : null;
         $this->type    = $pram['type']??isset($_POST['type']) ? $_POST['type'] : 'main';
         $this->json    = $pram['json']??isset($_POST['json'])? $_POST['json'] : null;
+
+
+
         if(isset($_POST['action']) && $_POST['action'] == 'create'): 
               $this->url  =strtolower(str_replace(' ','-',$this->name));
             else:

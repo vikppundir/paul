@@ -30,6 +30,13 @@
              $this->ServicesType        = isset($pram['ServicesType']) ? $pram['ServicesType'] :(isset($_POST['ServicesType']) ? $_POST['ServicesType'] :0);
              $this->Services            = isset($pram['Services']) ? $pram['Services'] :(isset($_POST['Services']) ? $_POST['Services'] :0);
              $this->is_active           = isset($pram['is_active']) ? $pram['is_active'] :(isset($_POST['is_active']) ? $_POST['is_active'] :1);
+             $this->experience          = isset($pram['experience']) ? $pram['experience'] :(isset($_POST['experience']) ? $_POST['experience'] :'');
+             $this->expDescription      = isset($pram['experienceDescription']) ? $pram['experienceDescription'] :(isset($_POST['experienceDescription']) ? $_POST['experienceDescription'] :'');
+             $this->aboutMe            = isset($pram['aboutMe']) ? $pram['aboutMe'] :(isset($_POST['aboutMe']) ? $_POST['aboutMe'] :'');
+            // $this->Services            = isset($pram['Services']) ? $pram['Services'] :(isset($_POST['Services']) ? $_POST['Services'] :0);
+            // $this->Services            = isset($pram['Services']) ? $pram['Services'] :(isset($_POST['Services']) ? $_POST['Services'] :0);
+            // $this->Services            = isset($pram['Services']) ? $pram['Services'] :(isset($_POST['Services']) ? $_POST['Services'] :0);
+            // $this->Services            = isset($pram['Services']) ? $pram['Services'] :(isset($_POST['Services']) ? $_POST['Services'] :0);
 
          }
          
@@ -110,7 +117,8 @@
                       $imagesUrl,
                       $ServicesType,
                       $sevice,
-                      0
+                      0,
+                      $this->aboutMe
                       
                      ];
            
@@ -126,9 +134,9 @@
              
              return query()->insert("insert into {$this->table}
              
-             (userId,busnissName,BusinessEmail,businessBio,facebook,Businessday,Businesshours,Service_area,contactNo,AlternateContactNo,BusinessPhoto,ServicesType,Services,is_active)
+             (userId,busnissName,BusinessEmail,businessBio,facebook,Businessday,Businesshours,Service_area,contactNo,AlternateContactNo,BusinessPhoto,ServicesType,Services,is_active,aboutMe)
              
-             values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",$value);
+             values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",$value);
              
          }
          

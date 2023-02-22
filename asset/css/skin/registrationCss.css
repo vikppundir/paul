@@ -451,3 +451,37 @@ ul#photos_clearing li img {
 .bootstrap-tagsinput .label-info{
  color: #fff;
 }
+
+#myexperienceClone,
+#expriceMain .servicetypemain,
+#qualificationClone {
+    position: relative;
+}
+#qualificationMain .servicetypemain {
+    position: relative;
+}
+#myskills .servicetypemain {
+    position: relative;
+}
+#expriceMain .servicetypemain::after, #myexperienceClone::after,
+#qualificationClone::after,
+#qualificationMain .servicetypemain::after,
+#myskills .servicetypemain::after {
+    content: '\f410';
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: #f00;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+#qualificationClone::after {
+    top: 31px;
+}
+#qualificationMain .servicetypemain::after {
+    top: 30px;
+}
+#myskills .servicetypemain::after {
+    right: -23px;
+    top: 30px;
+}
