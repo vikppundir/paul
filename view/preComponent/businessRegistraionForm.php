@@ -64,11 +64,11 @@
                 </div>
                 <h2 class="fs-title">About Me</h2>
                 <label class="fieldlabels">Short Description (Maximum 100 character)</label>
-              <textarea name="aboutMe" placeholder="I’m Noah, mentor of 45 year experience. I firstly worked as a HR in WMI Company for 3 years." ><?= $data->businessBio??'' ?></textarea>
+              <textarea name="aboutMe" placeholder="I’m Noah, mentor of 45 year experience. I firstly worked as a HR in WMI Company for 3 years." ><?= $data->businessAboutMe??'' ?></textarea>
               <hr>
               <h2 class="fs-title">About Profile</h2>
                 <label class="fieldlabels">Description: *</label>
-              <textarea name="businessBio" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"></textarea>  
+              <textarea name="businessBio" placeholder="I’m very passionate and dedicated to my work. I have over 40 years of experience in WMI as HR" rows="12"><?= $data->businessBio??'' ?></textarea>  
               <hr>
               <h2 class="fs-title">My Experience</h2>
               <div id="expriceMain">

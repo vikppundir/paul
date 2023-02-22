@@ -37,9 +37,9 @@
         
     }
     
-    public function ChildById($id = null){
+    public function ChildById(array $pram = null){
         
-        $ids = $id??$this->prentId;
+        $ids = $pram['id']??$this->prentId;
         
         return query()->select("select id,name from {$this->table} where parentId = {$ids} and is_active = 1");
     }
@@ -72,7 +72,7 @@
     public function offSetPagination($limit,$pageNumber){
         
           $offset =  ($pageNumber -1) * $limit;
-          return query()->select("SELECT c1.* FROM  {$this->table} c1 LEFT JOIN category c2 on c2.id = c1.parentId where c1.type ='{$this->type}' ORDER BY COALESCE(c2.id, c1.id), c1.id and c1.is_active = 1 limit {$limit} offset {$offset}");
+          return query()->select("SELECT c1.* FROM  {$this->table} c1 LEFT JOIN category c2 on c2.id = c1.parentId where c1.type ='{$this->type}' and c1.is_active = 1 ORDER BY COALESCE(c2.id, c1.id), c1.id  limit {$limit} offset {$offset}");
         
     }
     
