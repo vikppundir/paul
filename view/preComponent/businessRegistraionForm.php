@@ -330,7 +330,7 @@
                     
                <?php $category = new category(['type=>service']);  ?>
                
-               <?php $categorybusniss = $category->ChildById(0);   ?>
+               <?php $categorybusniss = $category->ChildById(['id'=>0]);   ?>
                   
                  <?php $categorybusniss = json_decode($categorybusniss);  ?>
                   
