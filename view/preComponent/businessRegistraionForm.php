@@ -377,7 +377,7 @@
                     <div class="servicebox">
                       <div class="selectservices">
                           
-                  <?php $catBYid = $category->ChildById($key);   ?>
+                  <?php $catBYid = $category->ChildById(['id'=>$key]);   ?>
                   
                   <?php $serviceArr = explode(',',$service); ?>
                   
