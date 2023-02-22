@@ -42,7 +42,7 @@
         $ids = $pram['id']??$this->prentId;
         $type = $pram['type']??$this->type;
         
-        return query()->select("select id,name from {$this->table} where parentId = {$ids} and type = {$type} and is_active = 1");
+        return query()->select("select id,name from {$this->table} where parentId = {$ids} and type = '{$type}' and is_active = 1");
     }
     
     public function byId($ids = null){
