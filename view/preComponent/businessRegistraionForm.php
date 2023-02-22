@@ -8,6 +8,7 @@
           <p>Fill all form field to go to next step</p>
           <div id="errs"> </div>
        <?php $business = new business(); ?>
+       <?php $category = new category();  ?>
        <?php $data = json_decode($business->businessById(user()->id))->data[0] ?? '' ?>
        
         
@@ -328,7 +329,7 @@
                 
                 <div class="servicemainbox">
                     
-               <?php $category = new category(['type=>service']);  ?>
+               
                
                <?php $categorybusniss = $category->ChildById(['id'=>0]);   ?>
                   
@@ -351,29 +352,67 @@
                     </div>
                   </div>
                   
-                <?php if(isset($data->Services)): ?>
+           
+                  <?php if(isset($data->Services)): ?>
                 <?php $service = json_decode($data->Services) ?>
                 
+               
+                   
+                 <?php foreach($service as $key => $service):  $key = str_replace("type_",'',$key); ?>
                  
-                 <h2 class="fs-title">My Skills</h2>
-                 <div id="myskills">
                   <div class="servicetypemain" id="sermbo" >
                       
-                    <label class="fieldlabels">Industry</label>
+                    <label class="fieldlabels">Services Type:</label>
                     
-               <select name="ServicesType[]" id="" onchange="childCategory(this)">
+             
+                  
+                     <select name="ServicesType[]" id="" onchange="childCategory(this)">
+                     <option value="">select</option>
+                   <?php  foreach($categorybusniss->data as $catb): ?>
+                    <option value="<?= $catb->id ?>" <?php if($key == $catb->id) echo 'selected'; ?>><?= $catb->name ?></option>
+                    <?php  endforeach; ?>
+                  </select>
+                    
+                    <h4>Select Services</h4>
+                    <div class="servicebox">
+                      <div class="selectservices">
+                          
+                  <?php $catBYid = $category->ChildById($key);   ?>
+                  
+                  <?php $serviceArr = explode(',',$service); ?>
+                  
+                  <?php $catBYid = json_decode($catBYid);  ?>
+                  
+                   <?php foreach($catBYid->data as $ct): ?>
+                   
+                       <div><input type="checkbox" value="<?=$ct->id?>" name="Services<?=$key?>[]" <?php if(in_array($ct->id,$serviceArr)) echo 'checked' ?> ><?=$ct->name?> </div>
+                      
+                    <?php endforeach; ?>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <?php endforeach; ?>
+                  <?php else: ?>
+                  
+                      <div class="servicetypemain" id="sermbo" >
+                      
+                    <label class="fieldlabels">Services Type:</label>
+                   <select name="ServicesType[]" id="" onchange="childCategory(this)">
                      <option value="">select</option>
                    <?php  foreach($categorybusniss->data as $catb): ?>
                     <option value="<?= $catb->id ?>"><?= $catb->name ?></option>
                     <?php  endforeach; ?>
                   </select>
-                    
-                    <h4>Expertise</h4>
+
+                       <h4>Select Services</h4>
                     <div class="servicebox">
                       <div class="selectservices">
                      </div>
                       
                     </div>
+                  </div>
+                  <?php endif; ?>
                    
                   </div>
                   </div>
@@ -397,7 +436,7 @@
                   <input type="number" value="" name="projectsComplete">
                   
                       
-                  <?php endif; ?>
+                
                   
                 </div>
                 

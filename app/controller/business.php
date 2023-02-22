@@ -110,7 +110,7 @@
                       $imagesUrl,
                       $ServicesType,
                       $sevice,
-                      1
+                      0
                       
                      ];
            
